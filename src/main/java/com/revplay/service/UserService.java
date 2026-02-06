@@ -12,35 +12,33 @@ public class UserService {
 
     private final UserDAO userDAO = new UserDAO();
 
-    // REGISTER
+    // =========================
+    // CORE REGISTER (USED BY TESTS)
+    // =========================
     public boolean register(String email, String password, String role) {
-
-        logger.info("User registration attempt for email: {}", email);
-
-        boolean result = userDAO.register(email, password, role);
-
-        if (result) {
-            logger.info("User registered successfully: {}", email);
-        } else {
-            logger.warn("User registration failed: {}", email);
-        }
-
-        return result;
+        logger.info("Registering {} with role {}", email, role);
+        return userDAO.register(email, password, role);
     }
 
+    // =========================
+    // USER REGISTER (APP MENU)
+    // =========================
+    public boolean registerUser(String email, String password) {
+        return register(email, password, "USER");
+    }
+
+    // =========================
+    // ARTIST REGISTER (APP MENU)
+    // =========================
+    public boolean registerArtist(String email, String password) {
+        return register(email, password, "ARTIST");
+    }
+
+    // =========================
     // LOGIN
+    // =========================
     public User login(String email, String password) {
-
-        logger.info("Login attempt for email: {}", email);
-
-        User user = userDAO.login(email, password);
-
-        if (user != null) {
-            logger.info("Login successful for email: {}", email);
-        } else {
-            logger.warn("Login failed for email: {}", email);
-        }
-
-        return user;
+        logger.info("Login attempt for {}", email);
+        return userDAO.login(email, password);
     }
 }

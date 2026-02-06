@@ -29,7 +29,7 @@ public class RevPlayApplication {
         while (true) {
 
             System.out.println("\n🎵 ===== RevPlay Menu ===== 🎵");
-            System.out.println("1. Register");
+            System.out.println("1. Register User");
             System.out.println("2. Login");
             System.out.println("3. Browse Songs");
             System.out.println("4. Search Songs");
@@ -45,6 +45,12 @@ public class RevPlayApplication {
             System.out.println("14. Delete Playlist");
             System.out.println("15. Logout");
             System.out.println("16. Exit");
+
+            // 🎤 ARTIST OPTIONS
+            System.out.println("17. Register Artist");
+            System.out.println("18. Upload Song (Artist)");
+            System.out.println("19. View My Song Statistics (Artist)");
+
             System.out.print("Enter choice: ");
 
             int choice = scanner.nextInt();
@@ -54,23 +60,20 @@ public class RevPlayApplication {
 
             switch (choice) {
 
-                // 1️⃣ REGISTER
+                // ================= USER =================
+
                 case 1 -> {
                     System.out.print("Email: ");
                     String email = scanner.nextLine();
                     System.out.print("Password: ");
                     String password = scanner.nextLine();
 
-                    boolean success = userService.register(email, password, "USER");
-
-                    if (success) {
-                        System.out.println("✅ Registration successful");
-                    } else {
-                        System.out.println("❌ Registration failed");
-                    }
+                    boolean success = userService.registerUser(email, password);
+                    System.out.println(success
+                            ? "✅ User registered successfully"
+                            : "❌ Registration failed");
                 }
 
-                // 2️⃣ LOGIN
                 case 2 -> {
                     System.out.print("Email: ");
                     String email = scanner.nextLine();
@@ -80,29 +83,26 @@ public class RevPlayApplication {
                     loggedInUser = userService.login(email, password);
 
                     if (loggedInUser != null) {
-                        System.out.println("🎉 Login successful");
+                        System.out.println("🎉 Login successful (" +
+                                loggedInUser.getRole() + ")");
                     } else {
                         System.out.println("❌ Invalid credentials");
                     }
                 }
 
-                // 3️⃣ BROWSE SONGS
                 case 3 -> musicService.browseSongs();
 
-                // 4️⃣ SEARCH SONGS
                 case 4 -> {
                     System.out.print("Enter keyword: ");
                     String keyword = scanner.nextLine();
                     musicService.searchSongs(keyword);
                 }
 
-                // 5️⃣ PLAY SONG
                 case 5 -> {
                     if (loggedInUser == null) {
                         System.out.println("❌ Login required");
                         break;
                     }
-
                     System.out.print("Enter Song ID: ");
                     int songId = scanner.nextInt();
                     scanner.nextLine();
@@ -110,51 +110,46 @@ public class RevPlayApplication {
                     musicService.playSong(songId, loggedInUser.getEmail());
                 }
 
-                // 6️⃣ RECENTLY PLAYED
                 case 6 -> {
                     if (loggedInUser == null) {
                         System.out.println("❌ Login required");
                         break;
                     }
-
                     historyService.viewRecent(loggedInUser.getEmail());
                 }
 
-                // 7️⃣ LISTENING HISTORY
                 case 7 -> {
                     if (loggedInUser == null) {
                         System.out.println("❌ Login required");
                         break;
                     }
-
                     historyService.viewHistory(loggedInUser.getEmail());
                 }
 
-                // 8️⃣ ADD TO FAVORITES
                 case 8 -> {
                     if (loggedInUser == null) {
                         System.out.println("❌ Login required");
                         break;
                     }
-
                     System.out.print("Enter Song ID: ");
                     int songId = scanner.nextInt();
                     scanner.nextLine();
 
-                    favoriteService.addToFavorites(loggedInUser.getEmail(), songId);
+                    favoriteService.addToFavorites(
+                            loggedInUser.getEmail(), songId
+                    );
                 }
 
-                // 9️⃣ VIEW FAVORITES
                 case 9 -> {
                     if (loggedInUser == null) {
                         System.out.println("❌ Login required");
                         break;
                     }
-
-                    favoriteService.viewFavoriteSongs(loggedInUser.getEmail());
+                    favoriteService.viewFavoriteSongs(
+                            loggedInUser.getEmail()
+                    );
                 }
 
-                // 🔟 CREATE PLAYLIST
                 case 10 -> {
                     if (loggedInUser == null) {
                         System.out.println("❌ Login required");
@@ -178,17 +173,16 @@ public class RevPlayApplication {
                     );
                 }
 
-                // 1️⃣1️⃣ VIEW PLAYLISTS
                 case 11 -> {
                     if (loggedInUser == null) {
                         System.out.println("❌ Login required");
                         break;
                     }
-
-                    playlistService.viewUserPlaylists(loggedInUser.getEmail());
+                    playlistService.viewUserPlaylists(
+                            loggedInUser.getEmail()
+                    );
                 }
 
-                // 1️⃣2️⃣ ADD SONG TO PLAYLIST
                 case 12 -> {
                     if (loggedInUser == null) {
                         System.out.println("❌ Login required");
@@ -205,7 +199,6 @@ public class RevPlayApplication {
                     playlistService.addSong(playlistId, songId);
                 }
 
-                // 1️⃣3️⃣ REMOVE SONG FROM PLAYLIST
                 case 13 -> {
                     if (loggedInUser == null) {
                         System.out.println("❌ Login required");
@@ -222,7 +215,6 @@ public class RevPlayApplication {
                     playlistService.removeSong(playlistId, songId);
                 }
 
-                // 1️⃣4️⃣ DELETE PLAYLIST
                 case 14 -> {
                     if (loggedInUser == null) {
                         System.out.println("❌ Login required");
@@ -236,17 +228,70 @@ public class RevPlayApplication {
                     playlistService.deletePlaylist(playlistId);
                 }
 
-                // 1️⃣5️⃣ LOGOUT
                 case 15 -> {
                     loggedInUser = null;
                     System.out.println("👋 Logged out successfully");
                 }
 
-                // 1️⃣6️⃣ EXIT
                 case 16 -> {
                     logger.info("Application exited");
                     System.out.println("🚀 Thank you for using RevPlay");
                     System.exit(0);
+                }
+
+                // ================= ARTIST =================
+
+                case 17 -> {
+                    System.out.print("Artist Email: ");
+                    String email = scanner.nextLine();
+                    System.out.print("Password: ");
+                    String password = scanner.nextLine();
+
+                    boolean success =
+                            userService.registerArtist(email, password);
+
+                    System.out.println(success
+                            ? "✅ Artist registered successfully"
+                            : "❌ Artist registration failed");
+                }
+
+                case 18 -> {
+                    if (loggedInUser == null || !loggedInUser.isArtist()) {
+                        System.out.println("❌ Artist login required");
+                        break;
+                    }
+
+                    System.out.print("Song Title: ");
+                    String title = scanner.nextLine();
+
+                    System.out.print("Artist Name: ");
+                    String artistName = scanner.nextLine();
+
+                    System.out.print("Genre: ");
+                    String genre = scanner.nextLine();
+
+                    System.out.print("Duration (seconds): ");
+                    int duration = scanner.nextInt();
+                    scanner.nextLine();
+
+                    musicService.uploadSong(
+                            title,
+                            artistName,
+                            genre,
+                            duration,
+                            loggedInUser.getEmail()
+                    );
+                }
+
+                case 19 -> {
+                    if (loggedInUser == null || !loggedInUser.isArtist()) {
+                        System.out.println("❌ Artist login required");
+                        break;
+                    }
+
+                    musicService.viewMySongStats(
+                            loggedInUser.getEmail()
+                    );
                 }
 
                 default -> System.out.println("❌ Invalid option");

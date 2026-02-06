@@ -6,14 +6,12 @@ public class User {
     private String email;
     private String role;
 
-    // Constructor with ID (used when ID is known)
     public User(int id, String email, String role) {
         this.id = id;
         this.email = email;
         this.role = role;
     }
 
-    // Constructor without ID (used during login/register)
     public User(String email, String role) {
         this.email = email;
         this.role = role;
@@ -29,5 +27,9 @@ public class User {
 
     public String getRole() {
         return role;
+    }
+
+    public boolean isArtist() {
+        return "ARTIST".equalsIgnoreCase(role);
     }
 }
