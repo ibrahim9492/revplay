@@ -1,0 +1,810 @@
+2026-02-04 22:12:04 INFO  RevPlayApplication - RevPlay application started
+2026-02-04 22:12:37 INFO  RevPlayApplication - User selected menu option: 3
+2026-02-04 22:12:37 INFO  RevPlayApplication - User browsing songs
+2026-02-04 22:12:37 INFO  MusicService - User requested to browse songs
+2026-02-04 22:12:37 INFO  SongDAO - Fetching all songs from database
+2026-02-04 22:12:38 INFO  SongDAO - Fetched 3 songs successfully
+2026-02-04 22:12:38 INFO  MusicService - Displayed 3 songs to user
+2026-02-04 23:02:03 INFO  RevPlayApplication - RevPlay application started
+2026-02-04 23:03:27 INFO  RevPlayApplication - RevPlay application started
+2026-02-04 23:05:38 INFO  RevPlayApplication - RevPlay application started
+2026-02-04 23:05:44 INFO  RevPlayApplication - User selected menu option: 3
+2026-02-04 23:05:44 INFO  RevPlayApplication - User browsing songs
+2026-02-04 23:05:44 INFO  MusicService - User requested to browse songs
+2026-02-04 23:05:44 INFO  SongDAO - Fetching all songs from database
+2026-02-04 23:05:44 INFO  DBUtil - Oracle JDBC Driver loaded successfully
+2026-02-04 23:05:44 INFO  DBUtil - Attempting database connection
+2026-02-04 23:05:44 INFO  DBUtil - Database connection established successfully
+2026-02-04 23:05:44 INFO  SongDAO - Fetched 3 songs successfully
+2026-02-04 23:05:44 INFO  MusicService - Displayed 3 songs to user
+2026-02-04 23:05:50 INFO  RevPlayApplication - User selected menu option: 3
+2026-02-04 23:05:50 INFO  RevPlayApplication - User browsing songs
+2026-02-04 23:05:50 INFO  MusicService - User requested to browse songs
+2026-02-04 23:05:50 INFO  SongDAO - Fetching all songs from database
+2026-02-04 23:05:50 INFO  DBUtil - Attempting database connection
+2026-02-04 23:05:50 INFO  DBUtil - Database connection established successfully
+2026-02-04 23:05:50 INFO  SongDAO - Fetched 3 songs successfully
+2026-02-04 23:05:50 INFO  MusicService - Displayed 3 songs to user
+2026-02-04 23:05:53 INFO  RevPlayApplication - User selected menu option: 4
+2026-02-04 23:26:00 INFO  RevPlayApplication - RevPlay application started
+2026-02-04 23:26:05 INFO  RevPlayApplication - User selected menu option: 3
+2026-02-04 23:26:05 INFO  RevPlayApplication - User browsing songs
+2026-02-04 23:26:05 INFO  MusicService - User requested to browse songs
+2026-02-04 23:26:05 INFO  SongDAO - Fetching all songs from database
+2026-02-04 23:26:05 INFO  DBUtil - Oracle JDBC Driver loaded successfully
+2026-02-04 23:26:05 INFO  DBUtil - Attempting database connection
+2026-02-04 23:26:06 INFO  DBUtil - Database connection established successfully
+2026-02-04 23:26:06 INFO  SongDAO - Fetched 3 songs successfully
+2026-02-04 23:26:06 INFO  MusicService - Displayed 3 songs to user
+2026-02-04 23:26:07 INFO  RevPlayApplication - User selected menu option: 4
+2026-02-04 23:38:40 INFO  RevPlayApplication - RevPlay application started
+2026-02-04 23:38:46 INFO  RevPlayApplication - User selected menu option: 1
+2026-02-04 23:39:00 INFO  RevPlayApplication - User registration attempt: test@gmail.com
+2026-02-04 23:39:00 INFO  UserService - User registration attempt for email: test@gmail.com
+2026-02-04 23:39:00 INFO  DBUtil - Oracle JDBC Driver loaded successfully
+2026-02-04 23:39:00 INFO  DBUtil - Attempting database connection
+2026-02-04 23:39:00 INFO  DBUtil - Database connection established successfully
+2026-02-04 23:39:01 INFO  UserDAO - Inserted 1 user record(s) for email test@gmail.com
+2026-02-04 23:39:01 INFO  UserService - User registered successfully: test@gmail.com
+2026-02-04 23:39:01 INFO  RevPlayApplication - User registered successfully: test@gmail.com
+2026-02-05 00:06:12 INFO  RevPlayApplication - RevPlay application started
+2026-02-05 00:06:36 INFO  RevPlayApplication - User selected menu option: 1
+2026-02-05 00:06:51 INFO  RevPlayApplication - User registration attempt: test@gmail.com
+2026-02-05 00:06:51 INFO  UserService - User registration attempt for email: test@gmail.com
+2026-02-05 00:06:51 INFO  DBUtil - Oracle JDBC Driver loaded successfully
+2026-02-05 00:06:51 INFO  DBUtil - Attempting database connection
+2026-02-05 00:06:52 INFO  DBUtil - Database connection established successfully
+2026-02-05 00:06:52 ERROR UserDAO - Error during user registration for email test@gmail.com
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (REVPLAY_APP.SYS_C008239) violated
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:629) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:563) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1150) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:770) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:298) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:497) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:151) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:1051) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:1530) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1310) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3745) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeLargeUpdate(OraclePreparedStatement.java:3917) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3896) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:991) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at com.revplay.dao.UserDAO.register(UserDAO.java:30) [classes/:?]
+	at com.revplay.service.UserService.register(UserService.java:20) [classes/:?]
+	at com.revplay.app.RevPlayApplication.main(RevPlayApplication.java:62) [classes/:?]
+Caused by: oracle.jdbc.OracleDatabaseException: ORA-00001: unique constraint (REVPLAY_APP.SYS_C008239) violated
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:636) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	... 16 more
+2026-02-05 00:06:52 WARN  UserService - User registration failed for email: test@gmail.com
+2026-02-05 00:06:52 WARN  RevPlayApplication - User registration failed: test@gmail.com
+2026-02-05 00:06:59 INFO  RevPlayApplication - User selected menu option: 1
+2026-02-05 00:07:19 INFO  RevPlayApplication - User registration attempt: tahershaik123@gmail.com
+2026-02-05 00:07:19 INFO  UserService - User registration attempt for email: tahershaik123@gmail.com
+2026-02-05 00:07:19 INFO  DBUtil - Attempting database connection
+2026-02-05 00:07:19 INFO  DBUtil - Database connection established successfully
+2026-02-05 00:07:19 INFO  UserDAO - Inserted 1 user record(s) for email tahershaik123@gmail.com
+2026-02-05 00:07:19 INFO  UserService - User registered successfully: tahershaik123@gmail.com
+2026-02-05 00:07:19 INFO  RevPlayApplication - User registered successfully: tahershaik123@gmail.com
+2026-02-05 00:07:25 INFO  RevPlayApplication - User selected menu option: 5
+2026-02-05 00:07:25 WARN  RevPlayApplication - Create playlist attempted without login
+2026-02-05 00:07:31 INFO  RevPlayApplication - User selected menu option: 2
+2026-02-05 00:07:50 INFO  RevPlayApplication - Login attempt for user: tahershaik123@gmail.com
+2026-02-05 00:07:50 INFO  UserService - Login attempt for email: tahershaik123@gmail.com
+2026-02-05 00:07:50 INFO  DBUtil - Attempting database connection
+2026-02-05 00:07:50 INFO  DBUtil - Database connection established successfully
+2026-02-05 00:07:50 INFO  UserDAO - User authenticated: tahershaik123@gmail.com
+2026-02-05 00:07:50 INFO  UserService - Login successful for email: tahershaik123@gmail.com
+2026-02-05 00:07:50 INFO  RevPlayApplication - Login successful for user: tahershaik123@gmail.com
+2026-02-05 00:07:52 INFO  RevPlayApplication - User selected menu option: 5
+2026-02-05 00:08:36 INFO  RevPlayApplication - Creating playlist 'arijit' for user tahershaik123@gmail.com
+2026-02-05 00:08:36 INFO  PlaylistDAO - Creating playlist 'arijit' for user tahershaik123@gmail.com
+2026-02-05 00:08:36 INFO  DBUtil - Attempting database connection
+2026-02-05 00:08:36 INFO  DBUtil - Database connection established successfully
+2026-02-05 00:08:36 INFO  PlaylistDAO - Playlist 'arijit' created successfully
+2026-02-05 00:08:44 INFO  RevPlayApplication - User selected menu option: 6
+2026-02-05 00:08:44 INFO  RevPlayApplication - Viewing playlists for user tahershaik123@gmail.com
+2026-02-05 00:08:44 INFO  DBUtil - Attempting database connection
+2026-02-05 00:08:44 INFO  DBUtil - Database connection established successfully
+2026-02-05 00:08:44 INFO  PlaylistDAO - Fetched 1 playlists for user tahershaik123@gmail.com
+2026-02-05 00:09:17 INFO  RevPlayApplication - User selected menu option: 8
+2026-02-05 00:09:22 INFO  RevPlayApplication - Viewing songs in playlist 1
+2026-02-05 00:09:22 INFO  DBUtil - Attempting database connection
+2026-02-05 00:09:22 INFO  DBUtil - Database connection established successfully
+2026-02-05 00:09:22 INFO  PlaylistDAO - Fetched 1 songs from playlist 1
+2026-02-05 09:57:39 INFO  MusicService - User requested to browse songs
+2026-02-05 09:57:39 INFO  SongDAO - Fetching all songs from database
+2026-02-05 09:57:39 INFO  DBUtil - Attempting database connection
+2026-02-05 09:57:40 INFO  DBUtil - Database connection established successfully
+2026-02-05 09:57:40 INFO  SongDAO - Fetched 3 songs successfully
+2026-02-05 09:57:40 INFO  MusicService - Displayed 3 songs to user
+2026-02-05 09:57:40 INFO  UserService - Login attempt for email: testuser@gmail.com
+2026-02-05 09:57:40 INFO  DBUtil - Attempting database connection
+2026-02-05 09:57:40 INFO  DBUtil - Database connection established successfully
+2026-02-05 09:57:40 WARN  UserService - Login failed for email: testuser@gmail.com
+2026-02-05 09:57:40 INFO  UserService - User registration attempt for email: testuser@gmail.com
+2026-02-05 09:57:40 INFO  DBUtil - Attempting database connection
+2026-02-05 09:57:40 INFO  DBUtil - Database connection established successfully
+2026-02-05 09:57:40 INFO  UserDAO - Inserted 1 user record(s) for email testuser@gmail.com
+2026-02-05 09:57:40 INFO  UserService - User registered successfully: testuser@gmail.com
+2026-02-05 09:57:40 INFO  UserService - Login attempt for email: wrong@gmail.com
+2026-02-05 09:57:40 INFO  DBUtil - Attempting database connection
+2026-02-05 09:57:40 INFO  DBUtil - Database connection established successfully
+2026-02-05 09:57:40 WARN  UserService - Login failed for email: wrong@gmail.com
+2026-02-05 10:08:47 INFO  MusicService - User requested to browse songs
+2026-02-05 10:08:47 INFO  SongDAO - Fetching all songs from database
+2026-02-05 10:08:47 INFO  DBUtil - Attempting database connection
+2026-02-05 10:08:49 INFO  DBUtil - Database connection established successfully
+2026-02-05 10:08:49 INFO  SongDAO - Fetched 3 songs successfully
+2026-02-05 10:08:49 INFO  MusicService - Displayed 3 songs to user
+2026-02-05 10:08:49 INFO  UserService - User registration attempt for email: user_65e9e923-cd30-4bb1-952a-71891e9e3a75@gmail.com
+2026-02-05 10:08:49 INFO  DBUtil - Attempting database connection
+2026-02-05 10:08:49 INFO  DBUtil - Database connection established successfully
+2026-02-05 10:08:49 INFO  UserDAO - Inserted 1 user record(s) for email user_65e9e923-cd30-4bb1-952a-71891e9e3a75@gmail.com
+2026-02-05 10:08:49 INFO  UserService - User registered successfully: user_65e9e923-cd30-4bb1-952a-71891e9e3a75@gmail.com
+2026-02-05 10:08:49 INFO  UserService - Login attempt for email: user_65e9e923-cd30-4bb1-952a-71891e9e3a75@gmail.com
+2026-02-05 10:08:49 INFO  DBUtil - Attempting database connection
+2026-02-05 10:08:49 INFO  DBUtil - Database connection established successfully
+2026-02-05 10:08:49 INFO  UserDAO - User authenticated: user_65e9e923-cd30-4bb1-952a-71891e9e3a75@gmail.com
+2026-02-05 10:08:49 INFO  UserService - Login successful for email: user_65e9e923-cd30-4bb1-952a-71891e9e3a75@gmail.com
+2026-02-05 10:08:49 INFO  UserService - User registration attempt for email: user_68f597d7-84d1-44c8-83e7-73d493595450@gmail.com
+2026-02-05 10:08:49 INFO  DBUtil - Attempting database connection
+2026-02-05 10:08:49 INFO  DBUtil - Database connection established successfully
+2026-02-05 10:08:49 INFO  UserDAO - Inserted 1 user record(s) for email user_68f597d7-84d1-44c8-83e7-73d493595450@gmail.com
+2026-02-05 10:08:49 INFO  UserService - User registered successfully: user_68f597d7-84d1-44c8-83e7-73d493595450@gmail.com
+2026-02-05 10:08:49 INFO  UserService - Login attempt for email: wronguser@gmail.com
+2026-02-05 10:08:49 INFO  DBUtil - Attempting database connection
+2026-02-05 10:08:49 INFO  DBUtil - Database connection established successfully
+2026-02-05 10:08:49 WARN  UserService - Login failed for email: wronguser@gmail.com
+2026-02-05 10:55:25 INFO  MusicService - User requested to browse songs
+2026-02-05 10:55:25 INFO  SongDAO - Fetching all songs from database
+2026-02-05 10:55:25 INFO  DBUtil - Attempting database connection
+2026-02-05 10:55:26 INFO  DBUtil - Database connection established successfully
+2026-02-05 10:55:26 INFO  SongDAO - Fetched 3 songs successfully
+2026-02-05 10:55:26 INFO  MusicService - Displayed 3 songs to user
+2026-02-05 10:55:26 INFO  UserService - User registration attempt for email: user_81e14047-ee35-4fa3-a81b-1ed9c1fe7660@gmail.com
+2026-02-05 10:55:26 INFO  DBUtil - Attempting database connection
+2026-02-05 10:55:26 INFO  DBUtil - Database connection established successfully
+2026-02-05 10:55:26 INFO  UserDAO - Inserted 1 user record(s) for email user_81e14047-ee35-4fa3-a81b-1ed9c1fe7660@gmail.com
+2026-02-05 10:55:26 INFO  UserService - User registered successfully: user_81e14047-ee35-4fa3-a81b-1ed9c1fe7660@gmail.com
+2026-02-05 10:55:26 INFO  UserService - Login attempt for email: user_81e14047-ee35-4fa3-a81b-1ed9c1fe7660@gmail.com
+2026-02-05 10:55:26 INFO  DBUtil - Attempting database connection
+2026-02-05 10:55:26 INFO  DBUtil - Database connection established successfully
+2026-02-05 10:55:26 INFO  UserDAO - User authenticated: user_81e14047-ee35-4fa3-a81b-1ed9c1fe7660@gmail.com
+2026-02-05 10:55:26 INFO  UserService - Login successful for email: user_81e14047-ee35-4fa3-a81b-1ed9c1fe7660@gmail.com
+2026-02-05 10:55:26 INFO  UserService - User registration attempt for email: user_62496acf-8aa0-426a-b1be-29204c212f16@gmail.com
+2026-02-05 10:55:26 INFO  DBUtil - Attempting database connection
+2026-02-05 10:55:26 INFO  DBUtil - Database connection established successfully
+2026-02-05 10:55:26 INFO  UserDAO - Inserted 1 user record(s) for email user_62496acf-8aa0-426a-b1be-29204c212f16@gmail.com
+2026-02-05 10:55:26 INFO  UserService - User registered successfully: user_62496acf-8aa0-426a-b1be-29204c212f16@gmail.com
+2026-02-05 10:55:26 INFO  UserService - Login attempt for email: wronguser@gmail.com
+2026-02-05 10:55:26 INFO  DBUtil - Attempting database connection
+2026-02-05 10:55:26 INFO  DBUtil - Database connection established successfully
+2026-02-05 10:55:26 WARN  UserDAO - Login failed for email wronguser@gmail.com
+2026-02-05 10:55:26 WARN  UserService - Login failed for email: wronguser@gmail.com
+2026-02-05 10:59:10 INFO  RevPlayApplication - RevPlay application started
+2026-02-05 10:59:14 INFO  RevPlayApplication - User selected menu option: 2
+2026-02-05 10:59:21 INFO  RevPlayApplication - Login attempt for user: ibrahim@gmail.com
+2026-02-05 10:59:21 INFO  UserService - Login attempt for email: ibrahim@gmail.com
+2026-02-05 10:59:21 INFO  DBUtil - Attempting database connection
+2026-02-05 10:59:22 INFO  DBUtil - Database connection established successfully
+2026-02-05 10:59:22 WARN  UserDAO - Login failed for email ibrahim@gmail.com
+2026-02-05 10:59:22 WARN  UserService - Login failed for email: ibrahim@gmail.com
+2026-02-05 10:59:22 WARN  RevPlayApplication - Login failed for user: ibrahim@gmail.com
+2026-02-05 10:59:41 INFO  RevPlayApplication - User selected menu option: 1
+2026-02-05 10:59:55 INFO  RevPlayApplication - User registration attempt: taheer123@gmail.com
+2026-02-05 10:59:55 INFO  UserService - User registration attempt for email: taheer123@gmail.com
+2026-02-05 10:59:55 INFO  DBUtil - Attempting database connection
+2026-02-05 10:59:55 INFO  DBUtil - Database connection established successfully
+2026-02-05 10:59:55 INFO  UserDAO - Inserted 1 user record(s) for email taheer123@gmail.com
+2026-02-05 10:59:55 INFO  UserService - User registered successfully: taheer123@gmail.com
+2026-02-05 10:59:55 INFO  RevPlayApplication - User registered successfully: taheer123@gmail.com
+2026-02-05 10:59:59 INFO  RevPlayApplication - User selected menu option: 2
+2026-02-05 11:00:12 INFO  RevPlayApplication - Login attempt for user: taheer123@gmail.com
+2026-02-05 11:00:12 INFO  UserService - Login attempt for email: taheer123@gmail.com
+2026-02-05 11:00:12 INFO  DBUtil - Attempting database connection
+2026-02-05 11:00:12 INFO  DBUtil - Database connection established successfully
+2026-02-05 11:00:12 INFO  UserDAO - User authenticated: taheer123@gmail.com
+2026-02-05 11:00:12 INFO  UserService - Login successful for email: taheer123@gmail.com
+2026-02-05 11:00:12 INFO  RevPlayApplication - Login successful for user: taheer123@gmail.com
+2026-02-05 11:00:18 INFO  RevPlayApplication - User selected menu option: 3
+2026-02-05 11:00:18 INFO  RevPlayApplication - User browsing songs
+2026-02-05 11:00:18 INFO  MusicService - User requested to browse songs
+2026-02-05 11:00:18 INFO  SongDAO - Fetching all songs from database
+2026-02-05 11:00:18 INFO  DBUtil - Attempting database connection
+2026-02-05 11:00:18 INFO  DBUtil - Database connection established successfully
+2026-02-05 11:00:18 INFO  SongDAO - Fetched 3 songs successfully
+2026-02-05 11:00:18 INFO  MusicService - Displayed 3 songs to user
+2026-02-05 11:00:30 INFO  RevPlayApplication - User selected menu option: 4
+2026-02-05 11:00:39 INFO  RevPlayApplication - User requested to play song ID: 3
+2026-02-05 11:00:39 INFO  MusicService - User requested to play song with ID: 3
+2026-02-05 11:00:39 INFO  SongDAO - Playing song with ID: 3
+2026-02-05 11:00:39 INFO  DBUtil - Attempting database connection
+2026-02-05 11:00:39 INFO  DBUtil - Database connection established successfully
+2026-02-05 11:00:39 INFO  SongDAO - Song played successfully. Song ID: 3
+2026-02-05 11:00:39 INFO  MusicService - Song playback successful for ID: 3
+2026-02-05 11:00:59 INFO  RevPlayApplication - User selected menu option: 5
+2026-02-05 11:01:14 INFO  RevPlayApplication - Creating playlist 'karan aujla' for user taheer123@gmail.com
+2026-02-05 11:01:14 INFO  PlaylistDAO - Creating playlist 'karan aujla' for user taheer123@gmail.com
+2026-02-05 11:01:14 INFO  DBUtil - Attempting database connection
+2026-02-05 11:01:14 INFO  DBUtil - Database connection established successfully
+2026-02-05 11:01:14 INFO  PlaylistDAO - Playlist 'karan aujla' created successfully
+2026-02-05 11:01:21 INFO  RevPlayApplication - User selected menu option: 6
+2026-02-05 11:01:21 INFO  RevPlayApplication - Viewing playlists for user taheer123@gmail.com
+2026-02-05 11:01:21 INFO  DBUtil - Attempting database connection
+2026-02-05 11:01:22 INFO  DBUtil - Database connection established successfully
+2026-02-05 11:01:22 INFO  PlaylistDAO - Fetched 1 playlists for user taheer123@gmail.com
+2026-02-05 11:01:31 INFO  RevPlayApplication - User selected menu option: 7
+2026-02-05 11:01:50 INFO  RevPlayApplication - Adding song 1 to playlist 2
+2026-02-05 11:01:50 INFO  PlaylistDAO - Adding song 1 to playlist 2
+2026-02-05 11:01:50 INFO  DBUtil - Attempting database connection
+2026-02-05 11:01:50 INFO  DBUtil - Database connection established successfully
+2026-02-05 11:01:50 ERROR PlaylistDAO - Failed to add song to playlist
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (REVPLAY_APP.PK_PLAYLIST_SONGS) violated
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:629) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:563) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1150) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:770) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:298) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:497) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:151) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:1051) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:1530) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1310) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3745) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeLargeUpdate(OraclePreparedStatement.java:3917) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3896) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:991) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at com.revplay.dao.PlaylistDAO.addSongToPlaylist(PlaylistDAO.java:86) [classes/:?]
+	at com.revplay.service.PlaylistService.addSongToPlaylist(PlaylistService.java:40) [classes/:?]
+	at com.revplay.app.RevPlayApplication.main(RevPlayApplication.java:154) [classes/:?]
+Caused by: oracle.jdbc.OracleDatabaseException: ORA-00001: unique constraint (REVPLAY_APP.PK_PLAYLIST_SONGS) violated
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:636) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	... 16 more
+2026-02-05 11:02:13 INFO  RevPlayApplication - RevPlay application started
+2026-02-05 11:02:17 INFO  RevPlayApplication - User selected menu option: 7
+2026-02-05 11:02:17 WARN  RevPlayApplication - Add song to playlist attempted without login
+2026-02-05 11:02:21 INFO  RevPlayApplication - User selected menu option: 2
+2026-02-05 11:02:29 INFO  RevPlayApplication - Login attempt for user: taheer123@gmail.com
+2026-02-05 11:02:29 INFO  UserService - Login attempt for email: taheer123@gmail.com
+2026-02-05 11:02:29 INFO  DBUtil - Attempting database connection
+2026-02-05 11:02:29 INFO  DBUtil - Database connection established successfully
+2026-02-05 11:02:29 INFO  UserDAO - User authenticated: taheer123@gmail.com
+2026-02-05 11:02:29 INFO  UserService - Login successful for email: taheer123@gmail.com
+2026-02-05 11:02:29 INFO  RevPlayApplication - Login successful for user: taheer123@gmail.com
+2026-02-05 11:02:35 INFO  RevPlayApplication - User selected menu option: 7
+2026-02-05 11:02:48 INFO  RevPlayApplication - Adding song 2 to playlist 4
+2026-02-05 11:02:48 INFO  PlaylistDAO - Adding song 2 to playlist 4
+2026-02-05 11:02:48 INFO  DBUtil - Attempting database connection
+2026-02-05 11:02:48 INFO  DBUtil - Database connection established successfully
+2026-02-05 11:02:48 ERROR PlaylistDAO - Failed to add song to playlist
+java.sql.SQLIntegrityConstraintViolationException: ORA-02291: integrity constraint (REVPLAY_APP.FK_PLAYLIST) violated - parent key not found
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:629) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:563) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1150) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:770) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:298) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:497) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:151) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:1051) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:1530) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1310) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3745) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeLargeUpdate(OraclePreparedStatement.java:3917) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3896) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:991) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at com.revplay.dao.PlaylistDAO.addSongToPlaylist(PlaylistDAO.java:86) [classes/:?]
+	at com.revplay.service.PlaylistService.addSongToPlaylist(PlaylistService.java:40) [classes/:?]
+	at com.revplay.app.RevPlayApplication.main(RevPlayApplication.java:154) [classes/:?]
+Caused by: oracle.jdbc.OracleDatabaseException: ORA-02291: integrity constraint (REVPLAY_APP.FK_PLAYLIST) violated - parent key not found
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:636) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	... 16 more
+2026-02-05 11:03:14 INFO  RevPlayApplication - User selected menu option: 8
+2026-02-05 11:03:23 INFO  RevPlayApplication - Viewing songs in playlist 4
+2026-02-05 11:03:23 INFO  DBUtil - Attempting database connection
+2026-02-05 11:03:23 INFO  DBUtil - Database connection established successfully
+2026-02-05 11:03:23 INFO  PlaylistDAO - Fetched 0 songs from playlist 4
+2026-02-05 11:03:32 INFO  RevPlayApplication - User selected menu option: 9
+2026-02-05 11:03:36 INFO  RevPlayApplication - Adding song 1 to favorites for user taheer123@gmail.com
+2026-02-05 11:03:36 INFO  FavoriteService - User taheer123@gmail.com requested to add song 1 to favorites
+2026-02-05 11:03:36 INFO  FavoriteDAO - Adding song 1 to favorites for user taheer123@gmail.com
+2026-02-05 11:03:36 INFO  DBUtil - Attempting database connection
+2026-02-05 11:03:36 INFO  DBUtil - Database connection established successfully
+2026-02-05 11:03:36 INFO  FavoriteDAO - Song 1 added to favorites for user taheer123@gmail.com
+2026-02-05 11:03:44 INFO  RevPlayApplication - User selected menu option: 10
+2026-02-05 11:03:44 INFO  RevPlayApplication - Viewing favorite songs for user taheer123@gmail.com
+2026-02-05 11:03:44 INFO  FavoriteService - User taheer123@gmail.com requested favorite songs
+2026-02-05 11:03:44 INFO  FavoriteDAO - Fetching favorite songs for user taheer123@gmail.com
+2026-02-05 11:03:44 INFO  DBUtil - Attempting database connection
+2026-02-05 11:03:44 INFO  DBUtil - Database connection established successfully
+2026-02-05 11:03:44 INFO  FavoriteDAO - Fetched 1 favorite songs for user taheer123@gmail.com
+2026-02-05 11:03:44 INFO  FavoriteService - Displayed 1 favorite songs to user taheer123@gmail.com
+2026-02-05 11:03:49 INFO  RevPlayApplication - User selected menu option: 11
+2026-02-05 11:03:49 INFO  RevPlayApplication - Application exited by user
+2026-02-05 14:16:48 INFO  RevPlayApplication - RevPlay application started
+2026-02-05 14:21:31 INFO  RevPlayApplication - RevPlay application started
+2026-02-05 14:21:35 INFO  RevPlayApplication - User selected menu option: 2
+2026-02-05 14:21:48 INFO  RevPlayApplication - Login attempt for user: taheer123@gmail.com
+2026-02-05 14:21:48 INFO  UserService - Login attempt for email: taheer123@gmail.com
+2026-02-05 14:21:48 INFO  DBUtil - Attempting database connection
+2026-02-05 14:21:49 INFO  DBUtil - Database connection established successfully
+2026-02-05 14:21:49 INFO  UserDAO - User authenticated: taheer123@gmail.com
+2026-02-05 14:21:49 INFO  UserService - Login successful for email: taheer123@gmail.com
+2026-02-05 14:21:49 INFO  RevPlayApplication - Login successful for user: taheer123@gmail.com
+2026-02-05 14:22:44 INFO  RevPlayApplication - User selected menu option: 3
+2026-02-05 14:22:44 INFO  RevPlayApplication - User browsing songs
+2026-02-05 14:22:44 INFO  MusicService - User requested to browse songs
+2026-02-05 14:22:44 INFO  SongDAO - Fetching all songs from database
+2026-02-05 14:22:44 INFO  DBUtil - Attempting database connection
+2026-02-05 14:22:44 INFO  DBUtil - Database connection established successfully
+2026-02-05 14:22:44 INFO  SongDAO - Fetched 3 songs successfully
+2026-02-05 14:22:44 INFO  MusicService - Displayed 3 songs to user
+2026-02-05 14:22:54 INFO  RevPlayApplication - User selected menu option: 4
+2026-02-05 14:22:56 INFO  RevPlayApplication - User requested to play song ID: 1
+2026-02-05 14:22:56 INFO  MusicService - User requested to play song with ID: 1
+2026-02-05 14:22:56 INFO  SongDAO - Playing song with ID: 1
+2026-02-05 14:22:56 INFO  DBUtil - Attempting database connection
+2026-02-05 14:22:56 INFO  DBUtil - Database connection established successfully
+2026-02-05 14:22:57 INFO  SongDAO - Song played successfully. Song ID: 1
+2026-02-05 14:22:57 INFO  MusicService - Song playback successful for ID: 1
+2026-02-05 14:23:04 INFO  RevPlayApplication - User selected menu option: 5
+2026-02-05 14:23:09 INFO  RevPlayApplication - Creating playlist 'vikram' for user taheer123@gmail.com
+2026-02-05 14:23:09 INFO  PlaylistDAO - Creating playlist 'vikram' for user taheer123@gmail.com
+2026-02-05 14:23:09 INFO  DBUtil - Attempting database connection
+2026-02-05 14:23:10 INFO  DBUtil - Database connection established successfully
+2026-02-05 14:23:10 INFO  PlaylistDAO - Playlist 'vikram' created successfully
+2026-02-05 14:23:13 INFO  RevPlayApplication - User selected menu option: 6
+2026-02-05 14:23:13 INFO  RevPlayApplication - Viewing playlists for user taheer123@gmail.com
+2026-02-05 14:23:13 INFO  DBUtil - Attempting database connection
+2026-02-05 14:23:13 INFO  DBUtil - Database connection established successfully
+2026-02-05 14:23:13 INFO  PlaylistDAO - Fetched 2 playlists for user taheer123@gmail.com
+2026-02-05 14:23:19 INFO  RevPlayApplication - User selected menu option: 7
+2026-02-05 14:23:32 INFO  RevPlayApplication - Adding song 2 to playlist 3
+2026-02-05 14:23:32 INFO  PlaylistDAO - Adding song 2 to playlist 3
+2026-02-05 14:23:32 INFO  DBUtil - Attempting database connection
+2026-02-05 14:23:32 INFO  DBUtil - Database connection established successfully
+2026-02-05 14:23:32 ERROR PlaylistDAO - Failed to add song to playlist
+java.sql.SQLIntegrityConstraintViolationException: ORA-02291: integrity constraint (REVPLAY_APP.FK_PLAYLIST) violated - parent key not found
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:629) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:563) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1150) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:770) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:298) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:497) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:151) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:1051) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:1530) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1310) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3745) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeLargeUpdate(OraclePreparedStatement.java:3917) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3896) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:991) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at com.revplay.dao.PlaylistDAO.addSongToPlaylist(PlaylistDAO.java:86) [classes/:?]
+	at com.revplay.service.PlaylistService.addSongToPlaylist(PlaylistService.java:40) [classes/:?]
+	at com.revplay.app.RevPlayApplication.main(RevPlayApplication.java:154) [classes/:?]
+Caused by: oracle.jdbc.OracleDatabaseException: ORA-02291: integrity constraint (REVPLAY_APP.FK_PLAYLIST) violated - parent key not found
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:636) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	... 16 more
+2026-02-05 14:23:39 INFO  RevPlayApplication - User selected menu option: 8
+2026-02-05 14:23:48 INFO  RevPlayApplication - Viewing songs in playlist 3
+2026-02-05 14:23:48 INFO  DBUtil - Attempting database connection
+2026-02-05 14:23:48 INFO  DBUtil - Database connection established successfully
+2026-02-05 14:23:48 INFO  PlaylistDAO - Fetched 0 songs from playlist 3
+2026-02-05 14:24:17 INFO  RevPlayApplication - User selected menu option: 8
+2026-02-05 14:24:20 INFO  RevPlayApplication - Viewing songs in playlist 1
+2026-02-05 14:24:20 INFO  DBUtil - Attempting database connection
+2026-02-05 14:24:20 INFO  DBUtil - Database connection established successfully
+2026-02-05 14:24:20 INFO  PlaylistDAO - Fetched 1 songs from playlist 1
+2026-02-05 14:24:28 INFO  RevPlayApplication - User selected menu option: 10
+2026-02-05 14:24:28 INFO  RevPlayApplication - Viewing favorite songs for user taheer123@gmail.com
+2026-02-05 14:24:28 INFO  FavoriteService - User taheer123@gmail.com requested favorite songs
+2026-02-05 14:24:28 INFO  FavoriteDAO - Fetching favorite songs for user taheer123@gmail.com
+2026-02-05 14:24:28 INFO  DBUtil - Attempting database connection
+2026-02-05 14:24:28 INFO  DBUtil - Database connection established successfully
+2026-02-05 14:24:28 INFO  FavoriteDAO - Fetched 1 favorite songs for user taheer123@gmail.com
+2026-02-05 14:24:28 INFO  FavoriteService - Displayed 1 favorite songs to user taheer123@gmail.com
+2026-02-05 14:24:33 INFO  RevPlayApplication - User selected menu option: 11
+2026-02-05 14:24:33 INFO  RevPlayApplication - Application exited by user
+2026-02-05 14:25:13 INFO  MusicService - User requested to browse songs
+2026-02-05 14:25:13 INFO  SongDAO - Fetching all songs from database
+2026-02-05 14:25:13 INFO  DBUtil - Attempting database connection
+2026-02-05 14:25:14 INFO  DBUtil - Database connection established successfully
+2026-02-05 14:25:14 INFO  SongDAO - Fetched 3 songs successfully
+2026-02-05 14:25:14 INFO  MusicService - Displayed 3 songs to user
+2026-02-05 14:25:14 INFO  UserService - User registration attempt for email: user_6fc955ab-8f6f-46c2-8ff0-f1ffab9abb54@gmail.com
+2026-02-05 14:25:14 INFO  DBUtil - Attempting database connection
+2026-02-05 14:25:14 INFO  DBUtil - Database connection established successfully
+2026-02-05 14:25:14 INFO  UserDAO - Inserted 1 user record(s) for email user_6fc955ab-8f6f-46c2-8ff0-f1ffab9abb54@gmail.com
+2026-02-05 14:25:14 INFO  UserService - User registered successfully: user_6fc955ab-8f6f-46c2-8ff0-f1ffab9abb54@gmail.com
+2026-02-05 14:25:14 INFO  UserService - Login attempt for email: user_6fc955ab-8f6f-46c2-8ff0-f1ffab9abb54@gmail.com
+2026-02-05 14:25:14 INFO  DBUtil - Attempting database connection
+2026-02-05 14:25:14 INFO  DBUtil - Database connection established successfully
+2026-02-05 14:25:14 INFO  UserDAO - User authenticated: user_6fc955ab-8f6f-46c2-8ff0-f1ffab9abb54@gmail.com
+2026-02-05 14:25:14 INFO  UserService - Login successful for email: user_6fc955ab-8f6f-46c2-8ff0-f1ffab9abb54@gmail.com
+2026-02-05 14:25:14 INFO  UserService - User registration attempt for email: user_2a4b7c61-afc5-4f10-b306-7be40fff59f6@gmail.com
+2026-02-05 14:25:14 INFO  DBUtil - Attempting database connection
+2026-02-05 14:25:14 INFO  DBUtil - Database connection established successfully
+2026-02-05 14:25:14 INFO  UserDAO - Inserted 1 user record(s) for email user_2a4b7c61-afc5-4f10-b306-7be40fff59f6@gmail.com
+2026-02-05 14:25:14 INFO  UserService - User registered successfully: user_2a4b7c61-afc5-4f10-b306-7be40fff59f6@gmail.com
+2026-02-05 14:25:14 INFO  UserService - Login attempt for email: wronguser@gmail.com
+2026-02-05 14:25:14 INFO  DBUtil - Attempting database connection
+2026-02-05 14:25:14 INFO  DBUtil - Database connection established successfully
+2026-02-05 14:25:14 WARN  UserDAO - Login failed for email wronguser@gmail.com
+2026-02-05 14:25:14 WARN  UserService - Login failed for email: wronguser@gmail.com
+2026-02-05 15:10:45 INFO  RevPlayApplication - RevPlay Application Started
+2026-02-05 15:11:26 INFO  RevPlayApplication - Menu choice selected: 2
+2026-02-05 15:11:36 INFO  UserService - Login attempt for email: taheer123@gmail.com
+2026-02-05 15:11:36 INFO  DBUtil - Attempting database connection
+2026-02-05 15:11:38 INFO  DBUtil - Database connection established successfully
+2026-02-05 15:11:38 INFO  UserDAO - User authenticated: taheer123@gmail.com
+2026-02-05 15:11:38 INFO  UserService - Login successful for email: taheer123@gmail.com
+2026-02-05 15:11:40 INFO  RevPlayApplication - Menu choice selected: 3
+2026-02-05 15:11:40 INFO  MusicService - Browsing all songs
+2026-02-05 15:11:40 INFO  SongDAO - Fetching all songs
+2026-02-05 15:11:40 INFO  DBUtil - Attempting database connection
+2026-02-05 15:11:40 INFO  DBUtil - Database connection established successfully
+2026-02-05 15:11:40 INFO  SongDAO - Fetched 3 song(s)
+2026-02-05 15:11:46 INFO  RevPlayApplication - Menu choice selected: 4
+2026-02-05 15:12:12 INFO  MusicService - Service search for keyword: Believer
+2026-02-05 15:12:12 INFO  SongDAO - Searching songs with keyword: Believer
+2026-02-05 15:12:12 INFO  DBUtil - Attempting database connection
+2026-02-05 15:12:12 INFO  DBUtil - Database connection established successfully
+2026-02-05 15:12:12 INFO  SongDAO - Search returned 1 song(s)
+2026-02-05 15:16:31 INFO  RevPlayApplication - RevPlay Application Started
+2026-02-05 15:16:52 INFO  RevPlayApplication - Menu choice: 2
+2026-02-05 15:16:59 INFO  UserService - Login attempt for email: taheer123@gmail.com
+2026-02-05 15:16:59 INFO  DBUtil - Attempting database connection
+2026-02-05 15:17:00 INFO  DBUtil - Database connection established successfully
+2026-02-05 15:17:00 INFO  UserDAO - User authenticated: taheer123@gmail.com
+2026-02-05 15:17:01 INFO  UserService - Login successful for email: taheer123@gmail.com
+2026-02-05 15:17:14 INFO  RevPlayApplication - Menu choice: 5
+2026-02-05 15:17:29 INFO  DBUtil - Attempting database connection
+2026-02-05 15:17:29 INFO  DBUtil - Database connection established successfully
+2026-02-05 15:17:29 INFO  PlaylistDAO - Playlist 'vishal mishra' created for taheer123@gmail.com
+2026-02-05 15:17:34 INFO  RevPlayApplication - Menu choice: 6
+2026-02-05 15:17:34 INFO  DBUtil - Attempting database connection
+2026-02-05 15:17:34 INFO  DBUtil - Database connection established successfully
+2026-02-05 15:17:48 INFO  RevPlayApplication - Menu choice: 7
+2026-02-05 15:17:59 INFO  DBUtil - Attempting database connection
+2026-02-05 15:17:59 INFO  DBUtil - Database connection established successfully
+2026-02-05 15:17:59 INFO  PlaylistDAO - Song 1 added to playlist 1
+2026-02-05 15:18:07 INFO  RevPlayApplication - Menu choice: 8
+2026-02-05 15:18:09 INFO  DBUtil - Attempting database connection
+2026-02-05 15:18:09 INFO  DBUtil - Database connection established successfully
+2026-02-05 15:18:31 INFO  RevPlayApplication - Menu choice: 8
+2026-02-05 15:18:33 INFO  DBUtil - Attempting database connection
+2026-02-05 15:18:33 INFO  DBUtil - Database connection established successfully
+2026-02-05 15:18:44 INFO  RevPlayApplication - Menu choice: 8
+2026-02-05 15:18:46 INFO  DBUtil - Attempting database connection
+2026-02-05 15:18:46 INFO  DBUtil - Database connection established successfully
+2026-02-05 15:18:56 INFO  RevPlayApplication - Menu choice: 8
+2026-02-05 15:18:57 INFO  DBUtil - Attempting database connection
+2026-02-05 15:18:57 INFO  DBUtil - Database connection established successfully
+2026-02-05 15:19:05 INFO  RevPlayApplication - Menu choice: 7
+2026-02-05 15:19:13 INFO  DBUtil - Attempting database connection
+2026-02-05 15:19:13 INFO  DBUtil - Database connection established successfully
+2026-02-05 15:19:13 ERROR PlaylistDAO - Error adding song to playlist
+java.sql.SQLIntegrityConstraintViolationException: ORA-02291: integrity constraint (REVPLAY_APP.FK_PLAYLIST) violated - parent key not found
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:629) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:563) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1150) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:770) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:298) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:497) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:151) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:1051) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:1530) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1310) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3745) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeLargeUpdate(OraclePreparedStatement.java:3917) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3896) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:991) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at com.revplay.dao.PlaylistDAO.addSongToPlaylist(PlaylistDAO.java:86) [classes/:?]
+	at com.revplay.service.PlaylistService.addSongToPlaylist(PlaylistService.java:40) [classes/:?]
+	at com.revplay.app.RevPlayApplication.main(RevPlayApplication.java:105) [classes/:?]
+Caused by: oracle.jdbc.OracleDatabaseException: ORA-02291: integrity constraint (REVPLAY_APP.FK_PLAYLIST) violated - parent key not found
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:636) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	... 16 more
+2026-02-05 15:19:32 INFO  RevPlayApplication - Menu choice: 7
+2026-02-05 15:19:38 INFO  DBUtil - Attempting database connection
+2026-02-05 15:19:38 INFO  DBUtil - Database connection established successfully
+2026-02-05 15:19:38 ERROR PlaylistDAO - Error adding song to playlist
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (REVPLAY_APP.PK_PLAYLIST_SONGS) violated
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:629) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:563) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1150) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:770) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:298) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:497) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:151) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:1051) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:1530) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1310) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3745) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeLargeUpdate(OraclePreparedStatement.java:3917) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3896) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:991) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at com.revplay.dao.PlaylistDAO.addSongToPlaylist(PlaylistDAO.java:86) [classes/:?]
+	at com.revplay.service.PlaylistService.addSongToPlaylist(PlaylistService.java:40) [classes/:?]
+	at com.revplay.app.RevPlayApplication.main(RevPlayApplication.java:105) [classes/:?]
+Caused by: oracle.jdbc.OracleDatabaseException: ORA-00001: unique constraint (REVPLAY_APP.PK_PLAYLIST_SONGS) violated
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:636) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	... 16 more
+2026-02-05 15:19:46 INFO  RevPlayApplication - Menu choice: 8
+2026-02-05 15:19:48 INFO  DBUtil - Attempting database connection
+2026-02-05 15:19:48 INFO  DBUtil - Database connection established successfully
+2026-02-05 15:19:52 INFO  RevPlayApplication - Menu choice: 8
+2026-02-05 15:19:53 INFO  DBUtil - Attempting database connection
+2026-02-05 15:19:53 INFO  DBUtil - Database connection established successfully
+2026-02-05 15:19:58 INFO  RevPlayApplication - Menu choice: 9
+2026-02-05 15:20:07 INFO  DBUtil - Attempting database connection
+2026-02-05 15:20:07 INFO  DBUtil - Database connection established successfully
+2026-02-05 15:20:07 INFO  PlaylistDAO - Song 1 removed from playlist 1
+2026-02-05 15:20:31 INFO  RevPlayApplication - Menu choice: 8
+2026-02-05 15:20:34 INFO  DBUtil - Attempting database connection
+2026-02-05 15:20:34 INFO  DBUtil - Database connection established successfully
+2026-02-05 15:20:43 INFO  RevPlayApplication - Menu choice: 8
+2026-02-05 15:20:44 INFO  DBUtil - Attempting database connection
+2026-02-05 15:20:44 INFO  DBUtil - Database connection established successfully
+2026-02-05 15:21:01 INFO  RevPlayApplication - Menu choice: 8
+2026-02-05 15:21:02 INFO  DBUtil - Attempting database connection
+2026-02-05 15:21:02 INFO  DBUtil - Database connection established successfully
+2026-02-05 15:24:16 INFO  UserService - Login attempt for email: taheer123@gmail.com
+2026-02-05 15:24:16 INFO  DBUtil - Attempting database connection
+2026-02-05 15:24:17 INFO  DBUtil - Database connection established successfully
+2026-02-05 15:24:17 INFO  UserDAO - User authenticated: taheer123@gmail.com
+2026-02-05 15:24:17 INFO  UserService - Login successful for email: taheer123@gmail.com
+2026-02-05 15:24:26 INFO  DBUtil - Attempting database connection
+2026-02-05 15:24:26 INFO  DBUtil - Database connection established successfully
+2026-02-05 15:24:26 WARN  PlaylistDAO - Playlist 2 not found or unauthorized delete attempt
+2026-02-05 15:24:33 INFO  DBUtil - Attempting database connection
+2026-02-05 15:24:33 INFO  DBUtil - Database connection established successfully
+2026-02-05 15:24:33 WARN  PlaylistDAO - Playlist 1 not found or unauthorized delete attempt
+2026-02-05 15:24:48 INFO  DBUtil - Attempting database connection
+2026-02-05 15:24:48 INFO  DBUtil - Database connection established successfully
+2026-02-05 15:24:49 INFO  PlaylistDAO - Song 1 added to playlist 2
+2026-02-05 15:24:58 INFO  DBUtil - Attempting database connection
+2026-02-05 15:24:58 INFO  DBUtil - Database connection established successfully
+2026-02-05 15:25:11 INFO  DBUtil - Attempting database connection
+2026-02-05 15:25:11 INFO  DBUtil - Database connection established successfully
+2026-02-05 15:25:11 INFO  PlaylistDAO - Song 1 removed from playlist 2
+2026-02-05 15:25:19 INFO  DBUtil - Attempting database connection
+2026-02-05 15:25:19 INFO  DBUtil - Database connection established successfully
+2026-02-05 15:25:19 WARN  PlaylistDAO - Playlist 2 not found or unauthorized delete attempt
+2026-02-05 15:25:59 INFO  DBUtil - Attempting database connection
+2026-02-05 15:25:59 INFO  DBUtil - Database connection established successfully
+2026-02-05 15:26:14 INFO  DBUtil - Attempting database connection
+2026-02-05 15:26:14 INFO  DBUtil - Database connection established successfully
+2026-02-05 15:26:14 INFO  PlaylistDAO - Playlist 22 deleted by taheer123@gmail.com
+2026-02-05 16:01:40 INFO  UserService - Login attempt for email: taheer123@gmail.com
+2026-02-05 16:01:40 INFO  DBUtil - Attempting database connection
+2026-02-05 16:01:41 INFO  DBUtil - Database connection established successfully
+2026-02-05 16:01:41 INFO  UserDAO - User authenticated: taheer123@gmail.com
+2026-02-05 16:01:41 INFO  UserService - Login successful for email: taheer123@gmail.com
+2026-02-05 16:06:18 INFO  UserService - Login attempt for email: taheer123@gmail.com
+2026-02-05 16:06:18 INFO  DBUtil - Attempting database connection
+2026-02-05 16:06:19 INFO  DBUtil - Database connection established successfully
+2026-02-05 16:06:19 INFO  UserDAO - User authenticated: taheer123@gmail.com
+2026-02-05 16:06:19 INFO  UserService - Login successful for email: taheer123@gmail.com
+2026-02-05 16:06:23 INFO  DBUtil - Attempting database connection
+2026-02-05 16:06:23 INFO  DBUtil - Database connection established successfully
+2026-02-05 16:06:37 INFO  DBUtil - Attempting database connection
+2026-02-05 16:06:37 INFO  DBUtil - Database connection established successfully
+2026-02-05 16:06:37 INFO  SongDAO - Song 1 played by taheer123@gmail.com
+2026-02-05 16:06:43 INFO  DBUtil - Attempting database connection
+2026-02-05 16:06:43 INFO  DBUtil - Database connection established successfully
+2026-02-05 16:57:37 INFO  UserService - Login attempt for email: taheer123@gmail.com
+2026-02-05 16:57:37 INFO  DBUtil - Attempting database connection
+2026-02-05 16:57:37 INFO  DBUtil - Database connection established successfully
+2026-02-05 16:57:38 INFO  UserDAO - User authenticated: taheer123@gmail.com
+2026-02-05 16:57:38 INFO  UserService - Login successful for email: taheer123@gmail.com
+2026-02-05 16:57:57 INFO  DBUtil - Attempting database connection
+2026-02-05 16:57:57 INFO  DBUtil - Database connection established successfully
+2026-02-05 16:58:10 INFO  DBUtil - Attempting database connection
+2026-02-05 16:58:11 INFO  DBUtil - Database connection established successfully
+2026-02-05 16:58:21 INFO  DBUtil - Attempting database connection
+2026-02-05 16:58:21 INFO  DBUtil - Database connection established successfully
+2026-02-05 16:58:21 INFO  DBUtil - Attempting database connection
+2026-02-05 16:58:21 INFO  DBUtil - Database connection established successfully
+2026-02-05 16:58:32 INFO  DBUtil - Attempting database connection
+2026-02-05 16:58:32 INFO  DBUtil - Database connection established successfully
+2026-02-05 17:03:02 INFO  DBUtil - Attempting database connection
+2026-02-05 17:03:03 INFO  DBUtil - Database connection established successfully
+2026-02-05 17:03:03 INFO  PlaylistDAO - Playlist created: shreya ghosal for taheer123@gmail.com
+2026-02-05 17:03:14 INFO  DBUtil - Attempting database connection
+2026-02-05 17:03:14 INFO  DBUtil - Database connection established successfully
+2026-02-05 17:03:29 INFO  PlaylistService - Adding song 1 to playlist 1
+2026-02-05 17:03:29 INFO  DBUtil - Attempting database connection
+2026-02-05 17:03:29 INFO  DBUtil - Database connection established successfully
+2026-02-05 17:03:29 INFO  PlaylistDAO - Song 1 added to playlist 1
+2026-02-05 17:03:45 INFO  PlaylistService - Removing song 1 from playlist 1
+2026-02-05 17:03:45 INFO  DBUtil - Attempting database connection
+2026-02-05 17:03:45 INFO  DBUtil - Database connection established successfully
+2026-02-05 17:03:45 INFO  PlaylistDAO - Song 1 removed from playlist 1
+2026-02-05 17:04:10 INFO  PlaylistService - Deleting playlist 23
+2026-02-05 17:04:10 INFO  DBUtil - Attempting database connection
+2026-02-05 17:04:10 INFO  DBUtil - Database connection established successfully
+2026-02-05 17:04:10 INFO  PlaylistDAO - Playlist deleted: 23
+2026-02-05 17:04:19 INFO  DBUtil - Attempting database connection
+2026-02-05 17:04:19 INFO  DBUtil - Database connection established successfully
+2026-02-05 19:49:50 INFO  RevPlayApplication - RevPlay Application Started
+2026-02-05 19:50:01 INFO  RevPlayApplication - Menu option selected: 2
+2026-02-05 19:50:11 INFO  UserService - Login attempt for email: taheer123@gmail.com
+2026-02-05 19:50:11 INFO  DBUtil - Attempting database connection
+2026-02-05 19:50:12 INFO  DBUtil - Database connection established successfully
+2026-02-05 19:50:12 INFO  UserDAO - User authenticated: taheer123@gmail.com
+2026-02-05 19:50:12 INFO  UserService - Login successful for email: taheer123@gmail.com
+2026-02-05 19:50:12 INFO  RevPlayApplication - Login successful for taheer123@gmail.com
+2026-02-05 21:53:40 INFO  RevPlayApplication - RevPlay Application Started
+2026-02-05 21:53:56 INFO  RevPlayApplication - Menu option selected: 2
+2026-02-05 21:54:07 INFO  UserService - Login attempt for email: taheer123@gmail.com
+2026-02-05 21:54:07 INFO  DBUtil - Attempting database connection
+2026-02-05 21:54:09 INFO  DBUtil - Database connection established successfully
+2026-02-05 21:54:09 INFO  UserDAO - User authenticated: taheer123@gmail.com
+2026-02-05 21:54:09 INFO  UserService - Login successful for email: taheer123@gmail.com
+2026-02-05 21:54:15 INFO  RevPlayApplication - Menu option selected: 3
+2026-02-05 21:54:15 INFO  MusicService - Browsing all songs
+2026-02-05 21:54:15 INFO  DBUtil - Attempting database connection
+2026-02-05 21:54:15 INFO  DBUtil - Database connection established successfully
+2026-02-05 21:54:33 INFO  RevPlayApplication - Menu option selected: 4
+2026-02-05 21:54:40 INFO  MusicService - Searching songs with keyword: arijit singh
+2026-02-05 21:54:40 INFO  DBUtil - Attempting database connection
+2026-02-05 21:54:40 INFO  DBUtil - Database connection established successfully
+2026-02-05 21:55:20 INFO  RevPlayApplication - Menu option selected: 5
+2026-02-05 21:55:33 INFO  MusicService - Playing song 3 for user taheer123@gmail.com
+2026-02-05 21:55:33 INFO  DBUtil - Attempting database connection
+2026-02-05 21:55:33 INFO  DBUtil - Database connection established successfully
+2026-02-05 21:55:33 INFO  ListeningHistoryService - Saving listening history
+2026-02-05 21:55:33 INFO  DBUtil - Attempting database connection
+2026-02-05 21:55:33 INFO  DBUtil - Database connection established successfully
+2026-02-05 21:55:33 INFO  ListeningHistoryDAO - Listening history saved for user taheer123@gmail.com and song 3
+2026-02-05 21:55:57 INFO  RevPlayApplication - Menu option selected: 6
+2026-02-05 21:55:57 INFO  ListeningHistoryService - Viewing recently played songs
+2026-02-05 21:55:57 INFO  DBUtil - Attempting database connection
+2026-02-05 21:55:57 INFO  DBUtil - Database connection established successfully
+2026-02-05 21:56:08 INFO  RevPlayApplication - Menu option selected: 7
+2026-02-05 21:56:08 INFO  ListeningHistoryService - Viewing listening history
+2026-02-05 21:56:08 INFO  DBUtil - Attempting database connection
+2026-02-05 21:56:08 INFO  DBUtil - Database connection established successfully
+2026-02-05 21:56:16 INFO  RevPlayApplication - Menu option selected: 8
+2026-02-05 21:56:21 INFO  FavoriteService - Adding song 3 to favorites for taheer123@gmail.com
+2026-02-05 21:56:21 INFO  DBUtil - Attempting database connection
+2026-02-05 21:56:21 INFO  DBUtil - Database connection established successfully
+2026-02-05 21:56:21 INFO  FavoriteDAO - Song 3 added to favorites for taheer123@gmail.com
+2026-02-05 21:56:26 INFO  RevPlayApplication - Menu option selected: 9
+2026-02-05 21:56:26 INFO  FavoriteService - Fetching favorite songs for taheer123@gmail.com
+2026-02-05 21:56:26 INFO  DBUtil - Attempting database connection
+2026-02-05 21:56:26 INFO  DBUtil - Database connection established successfully
+2026-02-05 21:56:37 INFO  RevPlayApplication - Menu option selected: 10
+2026-02-05 21:57:07 INFO  PlaylistService - Creating playlist 'shaan' for user taheer123@gmail.com
+2026-02-05 21:57:07 INFO  DBUtil - Attempting database connection
+2026-02-05 21:57:08 INFO  DBUtil - Database connection established successfully
+2026-02-05 21:57:08 INFO  PlaylistDAO - Playlist created for user taheer123@gmail.com
+2026-02-05 21:57:13 INFO  RevPlayApplication - Menu option selected: 11
+2026-02-05 21:57:13 INFO  PlaylistService - Fetching playlists for user taheer123@gmail.com
+2026-02-05 21:57:13 INFO  DBUtil - Attempting database connection
+2026-02-05 21:57:13 INFO  DBUtil - Database connection established successfully
+2026-02-05 21:57:21 INFO  RevPlayApplication - Menu option selected: 12
+2026-02-05 21:57:40 INFO  PlaylistService - Adding song 1 to playlist 4
+2026-02-05 21:57:40 INFO  DBUtil - Attempting database connection
+2026-02-05 21:57:40 INFO  DBUtil - Database connection established successfully
+2026-02-05 21:57:40 ERROR PlaylistDAO - Error adding song to playlist
+java.sql.SQLIntegrityConstraintViolationException: ORA-02291: integrity constraint (REVPLAY_APP.FK_PLAYLIST) violated - parent key not found
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:629) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:563) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1150) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:770) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:298) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:497) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:151) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:1051) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:1530) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1310) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3745) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeLargeUpdate(OraclePreparedStatement.java:3917) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3896) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:991) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at com.revplay.dao.PlaylistDAO.addSongToPlaylist(PlaylistDAO.java:136) [classes/:?]
+	at com.revplay.service.PlaylistService.addSong(PlaylistService.java:57) [classes/:?]
+	at com.revplay.app.RevPlayApplication.main(RevPlayApplication.java:205) [classes/:?]
+Caused by: oracle.jdbc.OracleDatabaseException: ORA-02291: integrity constraint (REVPLAY_APP.FK_PLAYLIST) violated - parent key not found
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:636) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	... 16 more
+2026-02-05 21:58:12 INFO  RevPlayApplication - Menu option selected: 11
+2026-02-05 21:58:12 INFO  PlaylistService - Fetching playlists for user taheer123@gmail.com
+2026-02-05 21:58:12 INFO  DBUtil - Attempting database connection
+2026-02-05 21:58:12 INFO  DBUtil - Database connection established successfully
+2026-02-05 21:58:23 INFO  RevPlayApplication - Menu option selected: 12
+2026-02-05 21:58:36 INFO  PlaylistService - Adding song 1 to playlist 1
+2026-02-05 21:58:36 INFO  DBUtil - Attempting database connection
+2026-02-05 21:58:36 INFO  DBUtil - Database connection established successfully
+2026-02-05 21:58:36 INFO  PlaylistDAO - Song 1 added to playlist 1
+2026-02-05 21:58:43 INFO  RevPlayApplication - Menu option selected: 13
+2026-02-05 21:58:47 INFO  PlaylistService - Removing song 1 from playlist 1
+2026-02-05 21:58:47 INFO  DBUtil - Attempting database connection
+2026-02-05 21:58:47 INFO  DBUtil - Database connection established successfully
+2026-02-05 21:58:47 INFO  PlaylistDAO - Song 1 removed from playlist 1
+2026-02-05 21:58:57 INFO  RevPlayApplication - Menu option selected: 14
+2026-02-05 22:00:23 INFO  PlaylistService - Deleting playlist 261
+2026-02-05 22:00:23 INFO  DBUtil - Attempting database connection
+2026-02-05 22:00:23 INFO  DBUtil - Database connection established successfully
+2026-02-05 22:00:23 INFO  PlaylistDAO - Playlist 261 deleted
+2026-02-05 22:00:40 INFO  RevPlayApplication - Menu option selected: 11
+2026-02-05 22:00:40 INFO  PlaylistService - Fetching playlists for user taheer123@gmail.com
+2026-02-05 22:00:40 INFO  DBUtil - Attempting database connection
+2026-02-05 22:00:40 INFO  DBUtil - Database connection established successfully
+2026-02-05 22:00:59 INFO  RevPlayApplication - Menu option selected: 14
+2026-02-05 22:01:13 INFO  PlaylistService - Deleting playlist 26
+2026-02-05 22:01:13 INFO  DBUtil - Attempting database connection
+2026-02-05 22:01:14 INFO  DBUtil - Database connection established successfully
+2026-02-05 22:01:14 INFO  PlaylistDAO - Playlist 26 deleted
+2026-02-05 22:01:20 INFO  RevPlayApplication - Menu option selected: 11
+2026-02-05 22:01:20 INFO  PlaylistService - Fetching playlists for user taheer123@gmail.com
+2026-02-05 22:01:20 INFO  DBUtil - Attempting database connection
+2026-02-05 22:01:20 INFO  DBUtil - Database connection established successfully
+2026-02-05 22:01:28 INFO  RevPlayApplication - Menu option selected: 15
+2026-02-05 22:01:33 INFO  RevPlayApplication - Menu option selected: 16
+2026-02-05 22:01:33 INFO  RevPlayApplication - Application exited
+2026-02-05 22:02:19 INFO  MusicService - Browsing all songs
+2026-02-05 22:02:19 INFO  DBUtil - Attempting database connection
+2026-02-05 22:02:19 INFO  DBUtil - Database connection established successfully
+2026-02-05 22:02:20 INFO  UserService - User registration attempt for email: user_16a478ea-f672-4b1d-8c16-8cbb57e92a83@gmail.com
+2026-02-05 22:02:20 INFO  DBUtil - Attempting database connection
+2026-02-05 22:02:20 INFO  DBUtil - Database connection established successfully
+2026-02-05 22:02:20 INFO  UserDAO - Inserted 1 user record(s) for email user_16a478ea-f672-4b1d-8c16-8cbb57e92a83@gmail.com
+2026-02-05 22:02:20 INFO  UserService - User registered successfully: user_16a478ea-f672-4b1d-8c16-8cbb57e92a83@gmail.com
+2026-02-05 22:02:20 INFO  UserService - Login attempt for email: user_16a478ea-f672-4b1d-8c16-8cbb57e92a83@gmail.com
+2026-02-05 22:02:20 INFO  DBUtil - Attempting database connection
+2026-02-05 22:02:20 INFO  DBUtil - Database connection established successfully
+2026-02-05 22:02:20 INFO  UserDAO - User authenticated: user_16a478ea-f672-4b1d-8c16-8cbb57e92a83@gmail.com
+2026-02-05 22:02:20 INFO  UserService - Login successful for email: user_16a478ea-f672-4b1d-8c16-8cbb57e92a83@gmail.com
+2026-02-05 22:02:20 INFO  UserService - User registration attempt for email: user_bd59ab6f-f0c5-4504-8a0c-bac6b1ce464f@gmail.com
+2026-02-05 22:02:20 INFO  DBUtil - Attempting database connection
+2026-02-05 22:02:20 INFO  DBUtil - Database connection established successfully
+2026-02-05 22:02:20 INFO  UserDAO - Inserted 1 user record(s) for email user_bd59ab6f-f0c5-4504-8a0c-bac6b1ce464f@gmail.com
+2026-02-05 22:02:20 INFO  UserService - User registered successfully: user_bd59ab6f-f0c5-4504-8a0c-bac6b1ce464f@gmail.com
+2026-02-05 22:02:20 INFO  UserService - Login attempt for email: wronguser@gmail.com
+2026-02-05 22:02:20 INFO  DBUtil - Attempting database connection
+2026-02-05 22:02:20 INFO  DBUtil - Database connection established successfully
+2026-02-05 22:02:20 WARN  UserDAO - Login failed for email wronguser@gmail.com
+2026-02-05 22:02:20 WARN  UserService - Login failed for email: wronguser@gmail.com
+2026-02-06 10:22:17 INFO  RevPlayApplication - RevPlay Application Started
+2026-02-06 10:22:25 INFO  RevPlayApplication - Menu option selected: 16
+2026-02-06 10:22:25 INFO  RevPlayApplication - Application exited
+2026-02-06 10:22:48 INFO  MusicService - Browsing all songs
+2026-02-06 10:22:48 INFO  DBUtil - Attempting database connection
+2026-02-06 10:22:50 INFO  DBUtil - Database connection established successfully
+2026-02-06 10:22:50 INFO  UserService - User registration attempt for email: user_b11bc5f0-fd0e-4d83-bf1b-999989d5bbff@gmail.com
+2026-02-06 10:22:50 INFO  DBUtil - Attempting database connection
+2026-02-06 10:22:50 INFO  DBUtil - Database connection established successfully
+2026-02-06 10:22:50 INFO  UserDAO - Inserted 1 user record(s) for email user_b11bc5f0-fd0e-4d83-bf1b-999989d5bbff@gmail.com
+2026-02-06 10:22:50 INFO  UserService - User registered successfully: user_b11bc5f0-fd0e-4d83-bf1b-999989d5bbff@gmail.com
+2026-02-06 10:22:50 INFO  UserService - Login attempt for email: user_b11bc5f0-fd0e-4d83-bf1b-999989d5bbff@gmail.com
+2026-02-06 10:22:50 INFO  DBUtil - Attempting database connection
+2026-02-06 10:22:50 INFO  DBUtil - Database connection established successfully
+2026-02-06 10:22:50 INFO  UserDAO - User authenticated: user_b11bc5f0-fd0e-4d83-bf1b-999989d5bbff@gmail.com
+2026-02-06 10:22:50 INFO  UserService - Login successful for email: user_b11bc5f0-fd0e-4d83-bf1b-999989d5bbff@gmail.com
+2026-02-06 10:22:50 INFO  UserService - User registration attempt for email: user_7a24d58c-c9ee-4d5b-ae34-565443a82769@gmail.com
+2026-02-06 10:22:50 INFO  DBUtil - Attempting database connection
+2026-02-06 10:22:50 INFO  DBUtil - Database connection established successfully
+2026-02-06 10:22:50 INFO  UserDAO - Inserted 1 user record(s) for email user_7a24d58c-c9ee-4d5b-ae34-565443a82769@gmail.com
+2026-02-06 10:22:50 INFO  UserService - User registered successfully: user_7a24d58c-c9ee-4d5b-ae34-565443a82769@gmail.com
+2026-02-06 10:22:50 INFO  UserService - Login attempt for email: wronguser@gmail.com
+2026-02-06 10:22:50 INFO  DBUtil - Attempting database connection
+2026-02-06 10:22:50 INFO  DBUtil - Database connection established successfully
+2026-02-06 10:22:50 WARN  UserDAO - Login failed for email wronguser@gmail.com
+2026-02-06 10:22:50 WARN  UserService - Login failed for email: wronguser@gmail.com
