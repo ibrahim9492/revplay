@@ -14,67 +14,63 @@ The system is built using a modular, layered architecture, making it scalable an
 
 ### 👤 User (Listener) Features
 
-User registration and login
+    User registration and login
 
-Search songs, artists, albums, playlists, and podcasts
+    Search songs, artists, albums, playlists, and podcasts
 
-Browse content by genre, artist, and album
+    Browse content by genre, artist, and album
 
-Mark songs as favorites
+    Mark songs as favorites
 
-View favorite songs list
+    View favorite songs list
 
-Create public or private playlists
+    Create public or private playlists
 
-Add / remove songs from playlists
+    Add / remove songs from playlists
 
-Update playlist details (name, description, privacy)
+    Update playlist details (name, description, privacy)
 
-Delete playlists created by the user
+    Delete playlists created by the user
 
-View public playlists created by other users
+    View public playlists created by other users
 
 Simulated music player controls (text-based):
 
-Play
+    Play
 
-Pause
+    Pause
 
-Skip
+    View recently played songs
 
-Repeat
-
-View recently played songs
-
-Track complete listening history
+    Track complete listening history
 
 ### 🎤 Musician / Artist Features
 
-Register and login as an artist
+    Register and login as an artist
 
-Create and manage artist profile
+    Create and manage artist profile
 
-Upload songs with metadata:
+    Upload songs with metadata:
 
-Title
+    Title
 
-Album
+    Album
 
-Genre
+    Genre
 
-Duration
+    Duration
 
-Release date
+    Release date
 
-Create albums and add songs
+    Create albums and add songs
 
-Update and delete songs/albums
+    Update and delete songs/albums
 
-View uploaded songs and albums
+    View uploaded songs and albums
 
-Track play count and statistics
+    Track play count and statistics
 
-View users who have favorite their songs
+    View users who have favorite their songs
 
 ### Entity Relationship Diagram (ERD)
 
@@ -197,7 +193,7 @@ USE revplay_db;
 
 ## 📌 Step 2: Create Tables
 
--- Users Table
+# -- Users Table
 
 CREATE TABLE users (
 
@@ -215,7 +211,7 @@ created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 
 );
 
--- Songs Table
+# -- Songs Table
 
 CREATE TABLE songs (
 
@@ -237,7 +233,7 @@ play_count INT DEFAULT 0
 
 );
 
--- Playlists Table
+# -- Playlists Table
 
 CREATE TABLE playlists (
 
@@ -255,7 +251,7 @@ created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 
 );
 
--- Playlist Songs Mapping
+# -- Playlist Songs Mapping
 
 CREATE TABLE playlist_songs (
 
@@ -267,7 +263,7 @@ PRIMARY KEY (playlist_id, song_id)
 
 );
 
--- Favorites Table
+# -- Favorites Table
 
 CREATE TABLE favorites (
 
@@ -279,7 +275,7 @@ PRIMARY KEY (user_id, song_id)
 
 );
 
--- Listening History Table
+# -- Listening History Table
 
 CREATE TABLE listening_history (
 
