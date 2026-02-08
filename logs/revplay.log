@@ -853,3 +853,356 @@ Caused by: oracle.jdbc.OracleDatabaseException: ORA-02291: integrity constraint 
 2026-02-06 22:26:08 INFO  UserService - Login attempt for wronguser@gmail.com
 2026-02-06 22:26:08 INFO  DBUtil - Attempting database connection
 2026-02-06 22:26:08 INFO  DBUtil - Database connection established successfully
+2026-02-06 22:26:29 INFO  RevPlayApplication - RevPlay Application Started
+2026-02-06 22:26:48 INFO  RevPlayApplication - Menu option selected: 2
+2026-02-06 22:26:59 INFO  UserService - Login attempt for taheer123@gmail.com
+2026-02-06 22:26:59 INFO  DBUtil - Attempting database connection
+2026-02-06 22:27:00 INFO  DBUtil - Database connection established successfully
+2026-02-06 22:27:29 INFO  RevPlayApplication - Menu option selected: 1
+2026-02-06 22:27:38 INFO  UserService - Registering shaik@gmail.com with role USER
+2026-02-06 22:27:38 INFO  DBUtil - Attempting database connection
+2026-02-06 22:27:38 INFO  DBUtil - Database connection established successfully
+2026-02-06 22:27:47 INFO  RevPlayApplication - Menu option selected: 2
+2026-02-06 22:27:56 INFO  UserService - Login attempt for shaik@gmail.com
+2026-02-06 22:27:56 INFO  DBUtil - Attempting database connection
+2026-02-06 22:27:56 INFO  DBUtil - Database connection established successfully
+2026-02-06 22:28:06 INFO  RevPlayApplication - Menu option selected: 3
+2026-02-06 22:28:06 INFO  DBUtil - Attempting database connection
+2026-02-06 22:28:06 INFO  DBUtil - Database connection established successfully
+2026-02-06 22:28:24 INFO  RevPlayApplication - Menu option selected: 4
+2026-02-06 22:28:29 INFO  DBUtil - Attempting database connection
+2026-02-06 22:28:29 INFO  DBUtil - Database connection established successfully
+2026-02-06 22:28:37 INFO  RevPlayApplication - Menu option selected: 5
+2026-02-06 22:28:43 INFO  DBUtil - Attempting database connection
+2026-02-06 22:28:43 INFO  DBUtil - Database connection established successfully
+2026-02-06 22:28:43 INFO  ListeningHistoryService - Saving listening history
+2026-02-06 22:28:43 INFO  DBUtil - Attempting database connection
+2026-02-06 22:28:43 INFO  DBUtil - Database connection established successfully
+2026-02-06 22:28:43 INFO  ListeningHistoryDAO - Listening history saved for user shaik@gmail.com and song 3
+2026-02-06 22:29:17 INFO  RevPlayApplication - Menu option selected: 6
+2026-02-06 22:29:17 INFO  ListeningHistoryService - Viewing recently played songs
+2026-02-06 22:29:17 INFO  DBUtil - Attempting database connection
+2026-02-06 22:29:17 INFO  DBUtil - Database connection established successfully
+2026-02-06 22:29:25 INFO  RevPlayApplication - Menu option selected: 7
+2026-02-06 22:29:25 INFO  ListeningHistoryService - Viewing listening history
+2026-02-06 22:29:25 INFO  DBUtil - Attempting database connection
+2026-02-06 22:29:25 INFO  DBUtil - Database connection established successfully
+2026-02-06 22:30:11 INFO  RevPlayApplication - Menu option selected: 8
+2026-02-06 22:30:14 INFO  FavoriteService - Adding song 3 to favorites for shaik@gmail.com
+2026-02-06 22:30:14 INFO  DBUtil - Attempting database connection
+2026-02-06 22:30:14 INFO  DBUtil - Database connection established successfully
+2026-02-06 22:30:14 INFO  FavoriteDAO - Song 3 added to favorites for shaik@gmail.com
+2026-02-06 22:30:20 INFO  RevPlayApplication - Menu option selected: 9
+2026-02-06 22:30:20 INFO  FavoriteService - Fetching favorite songs for shaik@gmail.com
+2026-02-06 22:30:20 INFO  DBUtil - Attempting database connection
+2026-02-06 22:30:20 INFO  DBUtil - Database connection established successfully
+2026-02-06 22:35:23 INFO  RevPlayApplication - Menu option selected: 10
+2026-02-06 22:35:37 INFO  PlaylistService - Creating playlist 'vishal mishra' for user shaik@gmail.com
+2026-02-06 22:35:37 INFO  DBUtil - Attempting database connection
+2026-02-06 22:35:37 INFO  DBUtil - Database connection established successfully
+2026-02-06 22:35:37 INFO  PlaylistDAO - Playlist created for user shaik@gmail.com
+2026-02-06 22:35:41 INFO  RevPlayApplication - Menu option selected: 11
+2026-02-06 22:35:41 INFO  PlaylistService - Fetching playlists for user shaik@gmail.com
+2026-02-06 22:35:41 INFO  DBUtil - Attempting database connection
+2026-02-06 22:35:42 INFO  DBUtil - Database connection established successfully
+2026-02-06 22:35:51 INFO  RevPlayApplication - Menu option selected: 12
+2026-02-06 22:35:56 INFO  PlaylistService - Adding song 1 to playlist 1
+2026-02-06 22:35:56 INFO  DBUtil - Attempting database connection
+2026-02-06 22:35:56 INFO  DBUtil - Database connection established successfully
+2026-02-06 22:35:56 INFO  PlaylistDAO - Song 1 added to playlist 1
+2026-02-06 22:36:01 INFO  RevPlayApplication - Menu option selected: 13
+2026-02-06 22:36:05 INFO  PlaylistService - Removing song 1 from playlist 1
+2026-02-06 22:36:05 INFO  DBUtil - Attempting database connection
+2026-02-06 22:36:05 INFO  DBUtil - Database connection established successfully
+2026-02-06 22:36:05 INFO  PlaylistDAO - Song 1 removed from playlist 1
+2026-02-07 21:24:06 INFO  RevPlayApplication - RevPlay Application Started
+2026-02-07 21:24:12 INFO  RevPlayApplication - Menu option selected: 2
+2026-02-07 21:24:23 INFO  UserService - Login attempt for shaik@gmail.com
+2026-02-07 21:24:23 INFO  DBUtil - Attempting database connection
+2026-02-07 21:24:24 INFO  DBUtil - Database connection established successfully
+2026-02-07 21:24:32 INFO  RevPlayApplication - Menu option selected: 3
+2026-02-07 21:24:32 INFO  DBUtil - Attempting database connection
+2026-02-07 21:24:32 INFO  DBUtil - Database connection established successfully
+2026-02-07 21:24:45 INFO  RevPlayApplication - Menu option selected: 4
+2026-02-07 21:24:53 INFO  DBUtil - Attempting database connection
+2026-02-07 21:24:53 INFO  DBUtil - Database connection established successfully
+2026-02-07 21:25:28 INFO  RevPlayApplication - Menu option selected: 4
+2026-02-07 21:25:43 INFO  DBUtil - Attempting database connection
+2026-02-07 21:25:43 INFO  DBUtil - Database connection established successfully
+2026-02-07 21:25:48 INFO  RevPlayApplication - Menu option selected: 4
+2026-02-07 21:25:53 INFO  DBUtil - Attempting database connection
+2026-02-07 21:25:53 INFO  DBUtil - Database connection established successfully
+2026-02-07 21:26:32 INFO  RevPlayApplication - Menu option selected: 5
+2026-02-07 21:26:35 INFO  DBUtil - Attempting database connection
+2026-02-07 21:26:35 INFO  DBUtil - Database connection established successfully
+2026-02-07 21:26:35 INFO  ListeningHistoryService - Saving listening history
+2026-02-07 21:26:35 INFO  DBUtil - Attempting database connection
+2026-02-07 21:26:35 INFO  DBUtil - Database connection established successfully
+2026-02-07 21:26:35 INFO  ListeningHistoryDAO - Listening history saved for user shaik@gmail.com and song 1
+2026-02-07 21:26:53 INFO  RevPlayApplication - Menu option selected: 6
+2026-02-07 21:26:53 INFO  ListeningHistoryService - Viewing recently played songs
+2026-02-07 21:26:53 INFO  DBUtil - Attempting database connection
+2026-02-07 21:26:53 INFO  DBUtil - Database connection established successfully
+2026-02-07 21:27:02 INFO  RevPlayApplication - Menu option selected: 7
+2026-02-07 21:27:02 INFO  ListeningHistoryService - Viewing listening history
+2026-02-07 21:27:02 INFO  DBUtil - Attempting database connection
+2026-02-07 21:27:02 INFO  DBUtil - Database connection established successfully
+2026-02-07 21:27:10 INFO  RevPlayApplication - Menu option selected: 8
+2026-02-07 21:27:15 INFO  FavoriteService - Adding song 2 to favorites for shaik@gmail.com
+2026-02-07 21:27:15 INFO  DBUtil - Attempting database connection
+2026-02-07 21:27:15 INFO  DBUtil - Database connection established successfully
+2026-02-07 21:27:15 INFO  FavoriteDAO - Song 2 added to favorites for shaik@gmail.com
+2026-02-07 21:27:26 INFO  RevPlayApplication - Menu option selected: 9
+2026-02-07 21:27:26 INFO  FavoriteService - Fetching favorite songs for shaik@gmail.com
+2026-02-07 21:27:26 INFO  DBUtil - Attempting database connection
+2026-02-07 21:27:26 INFO  DBUtil - Database connection established successfully
+2026-02-07 21:27:37 INFO  RevPlayApplication - Menu option selected: 10
+2026-02-07 21:28:13 INFO  PlaylistService - Creating playlist 'mysongs' for user shaik@gmail.com
+2026-02-07 21:28:13 INFO  DBUtil - Attempting database connection
+2026-02-07 21:28:13 INFO  DBUtil - Database connection established successfully
+2026-02-07 21:28:13 INFO  PlaylistDAO - Playlist created for user shaik@gmail.com
+2026-02-07 21:28:20 INFO  RevPlayApplication - Menu option selected: 11
+2026-02-07 21:28:20 INFO  PlaylistService - Fetching playlists for user shaik@gmail.com
+2026-02-07 21:28:20 INFO  DBUtil - Attempting database connection
+2026-02-07 21:28:20 INFO  DBUtil - Database connection established successfully
+2026-02-07 21:28:30 INFO  RevPlayApplication - Menu option selected: 12
+2026-02-07 21:28:42 INFO  PlaylistService - Adding song 1 to playlist 4
+2026-02-07 21:28:42 INFO  DBUtil - Attempting database connection
+2026-02-07 21:28:42 INFO  DBUtil - Database connection established successfully
+2026-02-07 21:28:42 ERROR PlaylistDAO - Error adding song to playlist
+java.sql.SQLIntegrityConstraintViolationException: ORA-02291: integrity constraint (REVPLAY_APP.FK_PLAYLIST) violated - parent key not found
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:629) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:563) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1150) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:770) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:298) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:497) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:151) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:1051) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:1530) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1310) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3745) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeLargeUpdate(OraclePreparedStatement.java:3917) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3896) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:991) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	at com.revplay.dao.PlaylistDAO.addSongToPlaylist(PlaylistDAO.java:136) [classes/:?]
+	at com.revplay.service.PlaylistService.addSong(PlaylistService.java:57) [classes/:?]
+	at com.revplay.app.RevPlayApplication.main(RevPlayApplication.java:199) [classes/:?]
+Caused by: oracle.jdbc.OracleDatabaseException: ORA-02291: integrity constraint (REVPLAY_APP.FK_PLAYLIST) violated - parent key not found
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:636) ~[ojdbc8-21.9.0.0.jar:21.9.0.0.0]
+	... 16 more
+2026-02-07 21:28:51 INFO  RevPlayApplication - Menu option selected: 13
+2026-02-07 21:29:07 INFO  PlaylistService - Removing song 1 from playlist 11
+2026-02-07 21:29:07 INFO  DBUtil - Attempting database connection
+2026-02-07 21:29:07 INFO  DBUtil - Database connection established successfully
+2026-02-07 21:29:07 INFO  PlaylistDAO - Song 1 removed from playlist 11
+2026-02-07 21:29:18 INFO  RevPlayApplication - Menu option selected: 11
+2026-02-07 21:29:18 INFO  PlaylistService - Fetching playlists for user shaik@gmail.com
+2026-02-07 21:29:18 INFO  DBUtil - Attempting database connection
+2026-02-07 21:29:18 INFO  DBUtil - Database connection established successfully
+2026-02-07 21:29:30 INFO  RevPlayApplication - Menu option selected: 12
+2026-02-07 21:29:34 INFO  PlaylistService - Adding song 1 to playlist 2
+2026-02-07 21:29:34 INFO  DBUtil - Attempting database connection
+2026-02-07 21:29:34 INFO  DBUtil - Database connection established successfully
+2026-02-07 21:29:34 INFO  PlaylistDAO - Song 1 added to playlist 2
+2026-02-07 21:29:40 INFO  RevPlayApplication - Menu option selected: 13
+2026-02-07 21:29:42 INFO  PlaylistService - Removing song 1 from playlist 2
+2026-02-07 21:29:42 INFO  DBUtil - Attempting database connection
+2026-02-07 21:29:42 INFO  DBUtil - Database connection established successfully
+2026-02-07 21:29:42 INFO  PlaylistDAO - Song 1 removed from playlist 2
+2026-02-07 21:29:48 INFO  RevPlayApplication - Menu option selected: 14
+2026-02-07 21:29:51 INFO  PlaylistService - Deleting playlist 1
+2026-02-07 21:29:51 INFO  DBUtil - Attempting database connection
+2026-02-07 21:29:51 INFO  DBUtil - Database connection established successfully
+2026-02-07 21:29:51 INFO  PlaylistDAO - Playlist 1 deleted
+2026-02-07 21:30:03 INFO  RevPlayApplication - Menu option selected: 15
+2026-02-07 21:30:15 INFO  RevPlayApplication - Menu option selected: 17
+2026-02-07 21:30:31 INFO  UserService - Registering shaan@gmail.com with role ARTIST
+2026-02-07 21:30:31 INFO  DBUtil - Attempting database connection
+2026-02-07 21:30:31 INFO  DBUtil - Database connection established successfully
+2026-02-07 21:31:30 INFO  RevPlayApplication - RevPlay Application Started
+2026-02-07 21:31:40 INFO  DBUtil - Attempting database connection
+2026-02-07 21:31:40 INFO  DBUtil - Database connection established successfully
+2026-02-07 21:31:41 INFO  UserService - Registering user_d589c39b-6224-4617-9210-b8a613c34eb4@gmail.com with role USER
+2026-02-07 21:31:41 INFO  DBUtil - Attempting database connection
+2026-02-07 21:31:41 INFO  DBUtil - Database connection established successfully
+2026-02-07 21:31:41 INFO  UserService - Login attempt for user_d589c39b-6224-4617-9210-b8a613c34eb4@gmail.com
+2026-02-07 21:31:41 INFO  DBUtil - Attempting database connection
+2026-02-07 21:31:41 INFO  DBUtil - Database connection established successfully
+2026-02-07 21:31:41 INFO  UserService - Registering user_5aa5fc96-0498-4dd6-af4d-d9d492787f52@gmail.com with role USER
+2026-02-07 21:31:41 INFO  DBUtil - Attempting database connection
+2026-02-07 21:31:41 INFO  DBUtil - Database connection established successfully
+2026-02-07 21:31:41 INFO  UserService - Login attempt for wronguser@gmail.com
+2026-02-07 21:31:41 INFO  DBUtil - Attempting database connection
+2026-02-07 21:31:41 INFO  DBUtil - Database connection established successfully
+2026-02-07 22:12:19 INFO  DBUtil - Attempting database connection
+2026-02-07 22:12:20 INFO  DBUtil - Database connection established successfully
+2026-02-07 22:12:20 INFO  UserService - Registering user_fea5f2e6-a664-44b2-80d3-1fc8cd07228b@gmail.com with role USER
+2026-02-07 22:12:20 INFO  DBUtil - Attempting database connection
+2026-02-07 22:12:20 INFO  DBUtil - Database connection established successfully
+2026-02-07 22:12:20 INFO  UserService - Login attempt for user_fea5f2e6-a664-44b2-80d3-1fc8cd07228b@gmail.com
+2026-02-07 22:12:20 INFO  DBUtil - Attempting database connection
+2026-02-07 22:12:20 INFO  DBUtil - Database connection established successfully
+2026-02-07 22:12:20 INFO  UserService - Registering user_a487847c-dbc5-4043-b0ed-0bee74444500@gmail.com with role USER
+2026-02-07 22:12:20 INFO  DBUtil - Attempting database connection
+2026-02-07 22:12:20 INFO  DBUtil - Database connection established successfully
+2026-02-07 22:12:20 INFO  UserService - Login attempt for wronguser@gmail.com
+2026-02-07 22:12:20 INFO  DBUtil - Attempting database connection
+2026-02-07 22:12:20 INFO  DBUtil - Database connection established successfully
+2026-02-07 22:14:26 INFO  DBUtil - Attempting database connection
+2026-02-07 22:14:27 INFO  DBUtil - Database connection established successfully
+2026-02-07 22:14:27 INFO  UserService - Registering user_0b6a5db3-8b24-44df-8aff-fe656b8aa7c7@gmail.com with role USER
+2026-02-07 22:14:27 INFO  DBUtil - Attempting database connection
+2026-02-07 22:14:27 INFO  DBUtil - Database connection established successfully
+2026-02-07 22:14:27 INFO  UserService - Login attempt for user_0b6a5db3-8b24-44df-8aff-fe656b8aa7c7@gmail.com
+2026-02-07 22:14:27 INFO  DBUtil - Attempting database connection
+2026-02-07 22:14:27 INFO  DBUtil - Database connection established successfully
+2026-02-07 22:14:27 INFO  UserService - Registering user_54f6d240-a6cb-4ef0-bcaa-7517c547ce13@gmail.com with role USER
+2026-02-07 22:14:27 INFO  DBUtil - Attempting database connection
+2026-02-07 22:14:27 INFO  DBUtil - Database connection established successfully
+2026-02-07 22:14:27 INFO  UserService - Login attempt for wronguser@gmail.com
+2026-02-07 22:14:27 INFO  DBUtil - Attempting database connection
+2026-02-07 22:14:27 INFO  DBUtil - Database connection established successfully
+2026-02-07 22:14:37 INFO  RevPlayApplication - RevPlay Application Started
+2026-02-07 22:14:58 INFO  RevPlayApplication - Menu option selected: 2
+2026-02-07 22:15:05 INFO  UserService - Login attempt for shaik@gmail.com
+2026-02-07 22:15:05 INFO  DBUtil - Attempting database connection
+2026-02-07 22:15:06 INFO  DBUtil - Database connection established successfully
+2026-02-07 22:15:11 INFO  RevPlayApplication - Menu option selected: 17
+2026-02-07 22:15:37 INFO  UserService - Registering shaan@gmail.com with role ARTIST
+2026-02-07 22:15:37 INFO  DBUtil - Attempting database connection
+2026-02-07 22:15:37 INFO  DBUtil - Database connection established successfully
+2026-02-07 22:15:48 INFO  RevPlayApplication - Menu option selected: 18
+2026-02-07 22:16:00 INFO  RevPlayApplication - Menu option selected: 2
+2026-02-07 22:16:14 INFO  UserService - Login attempt for shaan@gmail.com
+2026-02-07 22:16:14 INFO  DBUtil - Attempting database connection
+2026-02-07 22:16:14 INFO  DBUtil - Database connection established successfully
+2026-02-07 22:16:23 INFO  RevPlayApplication - Menu option selected: 3
+2026-02-07 22:16:23 INFO  DBUtil - Attempting database connection
+2026-02-07 22:16:23 INFO  DBUtil - Database connection established successfully
+2026-02-07 22:16:37 INFO  RevPlayApplication - Menu option selected: 4
+2026-02-07 22:16:42 INFO  DBUtil - Attempting database connection
+2026-02-07 22:16:42 INFO  DBUtil - Database connection established successfully
+2026-02-07 22:16:54 INFO  RevPlayApplication - Menu option selected: 5
+2026-02-07 22:17:07 INFO  DBUtil - Attempting database connection
+2026-02-07 22:17:07 INFO  DBUtil - Database connection established successfully
+2026-02-07 22:17:07 INFO  ListeningHistoryService - Saving listening history
+2026-02-07 22:17:07 INFO  DBUtil - Attempting database connection
+2026-02-07 22:17:07 INFO  DBUtil - Database connection established successfully
+2026-02-07 22:17:07 INFO  ListeningHistoryDAO - Listening history saved for user shaan@gmail.com and song 1
+2026-02-07 22:17:14 INFO  RevPlayApplication - Menu option selected: 5
+2026-02-07 22:17:16 INFO  DBUtil - Attempting database connection
+2026-02-07 22:17:16 INFO  DBUtil - Database connection established successfully
+2026-02-07 22:17:16 INFO  ListeningHistoryService - Saving listening history
+2026-02-07 22:17:16 INFO  DBUtil - Attempting database connection
+2026-02-07 22:17:16 INFO  DBUtil - Database connection established successfully
+2026-02-07 22:17:16 INFO  ListeningHistoryDAO - Listening history saved for user shaan@gmail.com and song 2
+2026-02-07 22:17:27 INFO  RevPlayApplication - Menu option selected: 6
+2026-02-07 22:17:27 INFO  ListeningHistoryService - Viewing recently played songs
+2026-02-07 22:17:27 INFO  DBUtil - Attempting database connection
+2026-02-07 22:17:27 INFO  DBUtil - Database connection established successfully
+2026-02-07 22:17:34 INFO  RevPlayApplication - Menu option selected: 18
+2026-02-07 22:18:59 INFO  DBUtil - Attempting database connection
+2026-02-07 22:18:59 INFO  DBUtil - Database connection established successfully
+2026-02-07 22:19:22 INFO  RevPlayApplication - Menu option selected: 19
+2026-02-07 22:19:22 INFO  DBUtil - Attempting database connection
+2026-02-07 22:19:22 INFO  DBUtil - Database connection established successfully
+2026-02-07 23:24:14 INFO  RevPlayApplication - Menu option selected: 15
+2026-02-07 23:24:18 INFO  RevPlayApplication - Menu option selected: 2
+2026-02-07 23:24:31 INFO  UserService - Login attempt for taheer123@gmail.com
+2026-02-07 23:24:31 INFO  DBUtil - Attempting database connection
+2026-02-07 23:24:32 INFO  DBUtil - Database connection established successfully
+2026-02-07 23:24:36 INFO  RevPlayApplication - Menu option selected: 2
+2026-02-07 23:24:48 INFO  UserService - Login attempt for ibrahim@gmail.com
+2026-02-07 23:24:48 INFO  DBUtil - Attempting database connection
+2026-02-07 23:24:48 INFO  DBUtil - Database connection established successfully
+2026-02-07 23:24:57 INFO  RevPlayApplication - Menu option selected: 2
+2026-02-07 23:25:03 INFO  UserService - Login attempt for shaik@gmail.com
+2026-02-07 23:25:03 INFO  DBUtil - Attempting database connection
+2026-02-07 23:25:03 INFO  DBUtil - Database connection established successfully
+2026-02-07 23:25:11 INFO  RevPlayApplication - Menu option selected: 3
+2026-02-07 23:25:11 INFO  DBUtil - Attempting database connection
+2026-02-07 23:25:11 INFO  DBUtil - Database connection established successfully
+2026-02-07 23:25:31 INFO  RevPlayApplication - Menu option selected: 4
+2026-02-07 23:25:41 INFO  DBUtil - Attempting database connection
+2026-02-07 23:25:41 INFO  DBUtil - Database connection established successfully
+2026-02-07 23:25:53 INFO  RevPlayApplication - Menu option selected: 5
+2026-02-07 23:25:58 INFO  DBUtil - Attempting database connection
+2026-02-07 23:25:58 INFO  DBUtil - Database connection established successfully
+2026-02-07 23:25:58 INFO  ListeningHistoryService - Saving listening history
+2026-02-07 23:25:58 INFO  DBUtil - Attempting database connection
+2026-02-07 23:25:58 INFO  DBUtil - Database connection established successfully
+2026-02-07 23:25:58 INFO  ListeningHistoryDAO - Listening history saved for user shaik@gmail.com and song 21
+2026-02-07 23:26:14 INFO  RevPlayApplication - Menu option selected: 6
+2026-02-07 23:26:14 INFO  ListeningHistoryService - Viewing recently played songs
+2026-02-07 23:26:14 INFO  DBUtil - Attempting database connection
+2026-02-07 23:26:14 INFO  DBUtil - Database connection established successfully
+2026-02-07 23:26:30 INFO  RevPlayApplication - Menu option selected: 7
+2026-02-07 23:26:30 INFO  ListeningHistoryService - Viewing listening history
+2026-02-07 23:26:30 INFO  DBUtil - Attempting database connection
+2026-02-07 23:26:30 INFO  DBUtil - Database connection established successfully
+2026-02-07 23:26:37 INFO  RevPlayApplication - Menu option selected: 8
+2026-02-07 23:26:39 INFO  FavoriteService - Adding song 21 to favorites for shaik@gmail.com
+2026-02-07 23:26:39 INFO  DBUtil - Attempting database connection
+2026-02-07 23:26:39 INFO  DBUtil - Database connection established successfully
+2026-02-07 23:26:39 INFO  FavoriteDAO - Song 21 added to favorites for shaik@gmail.com
+2026-02-07 23:26:46 INFO  RevPlayApplication - Menu option selected: 9
+2026-02-07 23:26:46 INFO  FavoriteService - Fetching favorite songs for shaik@gmail.com
+2026-02-07 23:26:46 INFO  DBUtil - Attempting database connection
+2026-02-07 23:26:46 INFO  DBUtil - Database connection established successfully
+2026-02-07 23:26:57 INFO  RevPlayApplication - Menu option selected: 10
+2026-02-07 23:27:23 INFO  PlaylistService - Creating playlist 'sahiba' for user shaik@gmail.com
+2026-02-07 23:27:23 INFO  DBUtil - Attempting database connection
+2026-02-07 23:27:23 INFO  DBUtil - Database connection established successfully
+2026-02-07 23:27:23 INFO  PlaylistDAO - Playlist created for user shaik@gmail.com
+2026-02-07 23:27:28 INFO  RevPlayApplication - Menu option selected: 11
+2026-02-07 23:27:28 INFO  PlaylistService - Fetching playlists for user shaik@gmail.com
+2026-02-07 23:27:28 INFO  DBUtil - Attempting database connection
+2026-02-07 23:27:28 INFO  DBUtil - Database connection established successfully
+2026-02-07 23:27:40 INFO  RevPlayApplication - Menu option selected: 12
+2026-02-07 23:28:06 INFO  PlaylistService - Adding song 1 to playlist 41
+2026-02-07 23:28:06 INFO  DBUtil - Attempting database connection
+2026-02-07 23:28:06 INFO  DBUtil - Database connection established successfully
+2026-02-07 23:28:06 INFO  PlaylistDAO - Song 1 added to playlist 41
+2026-02-07 23:28:18 INFO  RevPlayApplication - Menu option selected: 11
+2026-02-07 23:28:18 INFO  PlaylistService - Fetching playlists for user shaik@gmail.com
+2026-02-07 23:28:18 INFO  DBUtil - Attempting database connection
+2026-02-07 23:28:18 INFO  DBUtil - Database connection established successfully
+2026-02-07 23:28:30 INFO  RevPlayApplication - Menu option selected: 13
+2026-02-07 23:28:32 INFO  PlaylistService - Removing song 1 from playlist 21
+2026-02-07 23:28:32 INFO  DBUtil - Attempting database connection
+2026-02-07 23:28:33 INFO  DBUtil - Database connection established successfully
+2026-02-07 23:28:33 INFO  PlaylistDAO - Song 1 removed from playlist 21
+2026-02-07 23:28:38 INFO  RevPlayApplication - Menu option selected: 13
+2026-02-07 23:28:41 INFO  PlaylistService - Removing song 1 from playlist 41
+2026-02-07 23:28:41 INFO  DBUtil - Attempting database connection
+2026-02-07 23:28:41 INFO  DBUtil - Database connection established successfully
+2026-02-07 23:28:41 INFO  PlaylistDAO - Song 1 removed from playlist 41
+2026-02-07 23:28:46 INFO  RevPlayApplication - Menu option selected: 15
+2026-02-07 23:28:50 INFO  RevPlayApplication - Menu option selected: 2
+2026-02-07 23:29:07 INFO  UserService - Login attempt for shaik@gmail.com
+2026-02-07 23:29:07 INFO  DBUtil - Attempting database connection
+2026-02-07 23:29:07 INFO  DBUtil - Database connection established successfully
+2026-02-07 23:29:13 INFO  RevPlayApplication - Menu option selected: 15
+2026-02-07 23:29:44 INFO  RevPlayApplication - Menu option selected: 1717
+2026-02-07 23:30:06 INFO  RevPlayApplication - Menu option selected: 17
+2026-02-07 23:30:49 INFO  UserService - Registering karan@gmail.com with role ARTIST
+2026-02-07 23:30:49 INFO  DBUtil - Attempting database connection
+2026-02-07 23:30:49 INFO  DBUtil - Database connection established successfully
+2026-02-07 23:30:52 INFO  RevPlayApplication - Menu option selected: 2
+2026-02-07 23:30:58 INFO  UserService - Login attempt for karan@gmail.com
+2026-02-07 23:30:58 INFO  DBUtil - Attempting database connection
+2026-02-07 23:30:58 INFO  DBUtil - Database connection established successfully
+2026-02-07 23:31:10 INFO  RevPlayApplication - Menu option selected: 18
+2026-02-07 23:31:30 INFO  DBUtil - Attempting database connection
+2026-02-07 23:31:30 INFO  DBUtil - Database connection established successfully
+2026-02-07 23:31:33 INFO  RevPlayApplication - Menu option selected: 19
+2026-02-07 23:31:33 INFO  DBUtil - Attempting database connection
+2026-02-07 23:31:33 INFO  DBUtil - Database connection established successfully
+2026-02-07 23:31:40 INFO  RevPlayApplication - Menu option selected: 19
+2026-02-07 23:31:40 INFO  DBUtil - Attempting database connection
+2026-02-07 23:31:40 INFO  DBUtil - Database connection established successfully
+2026-02-07 23:31:47 INFO  RevPlayApplication - Menu option selected: 16
+2026-02-07 23:31:47 INFO  RevPlayApplication - Application exited
