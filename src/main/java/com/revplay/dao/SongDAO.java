@@ -13,13 +13,12 @@ public class SongDAO {
     // GET ALL SONGS
     // =========================
     public List<Song> getAllSongs() {
-
         List<Song> songs = new ArrayList<>();
         String sql = "SELECT * FROM songs ORDER BY song_id";
 
         try (Connection con = DBUtil.getConnection();
-             PreparedStatement ps = con.prepareStatement(sql);
-             ResultSet rs = ps.executeQuery()) {
+             Statement stmt = con.createStatement();
+             ResultSet rs = stmt.executeQuery(sql)) {
 
             while (rs.next()) {
                 songs.add(mapSong(rs));
@@ -38,9 +37,12 @@ public class SongDAO {
     public List<Song> searchSongs(String keyword) {
 
         List<Song> songs = new ArrayList<>();
-        String sql =
-                "SELECT * FROM songs WHERE LOWER(title) LIKE ? " +
-                        "OR LOWER(artist) LIKE ? OR LOWER(genre) LIKE ?";
+        String sql = """
+            SELECT * FROM songs
+            WHERE LOWER(title) LIKE ?
+               OR LOWER(artist) LIKE ?
+               OR LOWER(genre) LIKE ?
+        """;
 
         try (Connection con = DBUtil.getConnection();
              PreparedStatement ps = con.prepareStatement(sql)) {
@@ -51,7 +53,6 @@ public class SongDAO {
             ps.setString(3, key);
 
             ResultSet rs = ps.executeQuery();
-
             while (rs.next()) {
                 songs.add(mapSong(rs));
             }
@@ -84,44 +85,57 @@ public class SongDAO {
     }
 
     // =========================
-    // ARTIST UPLOAD SONG
+    // SONG EXISTS
     // =========================
-    public boolean uploadSong(
-            String title,
-            String artistName,
-            String genre,
-            int duration,
-            String artistEmail) {
+    public boolean songExists(int songId) {
 
-        String sql =
-                "INSERT INTO songs (title, artist, genre, duration, play_count, artist_email) " +
-                        "VALUES (?, ?, ?, ?, 0, ?)";
+        String sql = "SELECT 1 FROM songs WHERE song_id = ?";
 
         try (Connection con = DBUtil.getConnection();
              PreparedStatement ps = con.prepareStatement(sql)) {
 
-            ps.setString(1, title);
-            ps.setString(2, artistName);
-            ps.setString(3, genre);
-            ps.setInt(4, duration);
-            ps.setString(5, artistEmail);
-
-            ps.executeUpdate();
-            return true;
+            ps.setInt(1, songId);
+            return ps.executeQuery().next();
 
         } catch (Exception e) {
-            e.printStackTrace();
             return false;
         }
     }
 
     // =========================
-    // VIEW ARTIST SONGS
+    // ARTIST: UPLOAD SONG
     // =========================
-    public List<Song> getSongsByArtist(String artistEmail) {
+    public void uploadSong(String title,
+                           String artistEmail,
+                           String genre,
+                           int duration) {
+
+        String sql = """
+            INSERT INTO songs (title, artist, genre, duration, play_count)
+            VALUES (?, ?, ?, ?, 0)
+        """;
+
+        try (Connection con = DBUtil.getConnection();
+             PreparedStatement ps = con.prepareStatement(sql)) {
+
+            ps.setString(1, title);
+            ps.setString(2, artistEmail);
+            ps.setString(3, genre);
+            ps.setInt(4, duration);
+            ps.executeUpdate();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    // =========================
+    // ARTIST: VIEW OWN SONGS + STATS
+    // =========================
+    public List<Song> getArtistSongs(String artistEmail) {
 
         List<Song> songs = new ArrayList<>();
-        String sql = "SELECT * FROM songs WHERE artist_email = ?";
+        String sql = "SELECT * FROM songs WHERE artist = ?";
 
         try (Connection con = DBUtil.getConnection();
              PreparedStatement ps = con.prepareStatement(sql)) {
@@ -141,34 +155,7 @@ public class SongDAO {
     }
 
     // =========================
-    // ARTIST SONG STATISTICS
-    // =========================
-    public List<Song> getSongStatsByArtist(String artistEmail) {
-
-        List<Song> songs = new ArrayList<>();
-
-        String sql =
-                "SELECT * FROM songs WHERE artist_email = ? ORDER BY play_count DESC";
-
-        try (Connection con = DBUtil.getConnection();
-             PreparedStatement ps = con.prepareStatement(sql)) {
-
-            ps.setString(1, artistEmail);
-            ResultSet rs = ps.executeQuery();
-
-            while (rs.next()) {
-                songs.add(mapSong(rs));
-            }
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        return songs;
-    }
-
-    // =========================
-    // MAP SONG
+    // COMMON MAPPER
     // =========================
     private Song mapSong(ResultSet rs) throws SQLException {
         return new Song(

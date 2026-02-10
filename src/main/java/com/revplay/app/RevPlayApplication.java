@@ -14,8 +14,6 @@ public class RevPlayApplication {
 
     public static void main(String[] args) {
 
-        logger.info("RevPlay Application Started");
-
         Scanner scanner = new Scanner(System.in);
 
         UserService userService = new UserService();
@@ -23,14 +21,16 @@ public class RevPlayApplication {
         PlaylistService playlistService = new PlaylistService();
         FavoriteService favoriteService = new FavoriteService();
         ListeningHistoryService historyService = new ListeningHistoryService();
+        ArtistService artistService = new ArtistService();
 
         User loggedInUser = null;
+        User loggedInArtist = null;
 
         while (true) {
 
             System.out.println("\n🎵 ===== RevPlay Menu ===== 🎵");
             System.out.println("1. Register User");
-            System.out.println("2. Login");
+            System.out.println("2. Login User");
             System.out.println("3. Browse Songs");
             System.out.println("4. Search Songs");
             System.out.println("5. Play Song");
@@ -43,14 +43,12 @@ public class RevPlayApplication {
             System.out.println("12. Add Song to Playlist");
             System.out.println("13. Remove Song from Playlist");
             System.out.println("14. Delete Playlist");
-            System.out.println("15. Logout");
+            System.out.println("15. Logout User");
             System.out.println("16. Exit");
-
-            // 🎤 ARTIST OPTIONS
             System.out.println("17. Register Artist");
-            System.out.println("18. Upload Song (Artist)");
-            System.out.println("19. View My Song Statistics (Artist)");
-
+            System.out.println("18. Login Artist");
+            System.out.println("19. Upload Song (Artist)");
+            System.out.println("20. View My Song Statistics (Artist)");
             System.out.print("Enter choice: ");
 
             int choice = scanner.nextInt();
@@ -68,10 +66,7 @@ public class RevPlayApplication {
                     System.out.print("Password: ");
                     String password = scanner.nextLine();
 
-                    boolean success = userService.registerUser(email, password);
-                    System.out.println(success
-                            ? "✅ User registered successfully"
-                            : "❌ Registration failed");
+                    userService.register(email, password, "USER");
                 }
 
                 case 2 -> {
@@ -81,21 +76,13 @@ public class RevPlayApplication {
                     String password = scanner.nextLine();
 
                     loggedInUser = userService.login(email, password);
-
-                    if (loggedInUser != null) {
-                        System.out.println("🎉 Login successful (" +
-                                loggedInUser.getRole() + ")");
-                    } else {
-                        System.out.println("❌ Invalid credentials");
-                    }
                 }
 
                 case 3 -> musicService.browseSongs();
 
                 case 4 -> {
-                    System.out.print("Enter keyword: ");
-                    String keyword = scanner.nextLine();
-                    musicService.searchSongs(keyword);
+                    System.out.print("Keyword: ");
+                    musicService.searchSongs(scanner.nextLine());
                 }
 
                 case 5 -> {
@@ -103,11 +90,9 @@ public class RevPlayApplication {
                         System.out.println("❌ Login required");
                         break;
                     }
-                    System.out.print("Enter Song ID: ");
-                    int songId = scanner.nextInt();
+                    System.out.print("Song ID: ");
+                    musicService.playSong(scanner.nextInt(), loggedInUser.getEmail());
                     scanner.nextLine();
-
-                    musicService.playSong(songId, loggedInUser.getEmail());
                 }
 
                 case 6 -> {
@@ -131,13 +116,9 @@ public class RevPlayApplication {
                         System.out.println("❌ Login required");
                         break;
                     }
-                    System.out.print("Enter Song ID: ");
-                    int songId = scanner.nextInt();
+                    System.out.print("Song ID: ");
+                    favoriteService.addToFavorites(loggedInUser.getEmail(), scanner.nextInt());
                     scanner.nextLine();
-
-                    favoriteService.addToFavorites(
-                            loggedInUser.getEmail(), songId
-                    );
                 }
 
                 case 9 -> {
@@ -145,9 +126,7 @@ public class RevPlayApplication {
                         System.out.println("❌ Login required");
                         break;
                     }
-                    favoriteService.viewFavoriteSongs(
-                            loggedInUser.getEmail()
-                    );
+                    favoriteService.viewFavoriteSongs(loggedInUser.getEmail());
                 }
 
                 case 10 -> {
@@ -158,19 +137,13 @@ public class RevPlayApplication {
 
                     System.out.print("Playlist Name: ");
                     String name = scanner.nextLine();
-
                     System.out.print("Description: ");
-                    String description = scanner.nextLine();
-
-                    System.out.print("Privacy (PUBLIC / PRIVATE): ");
+                    String desc = scanner.nextLine();
+                    System.out.print("Privacy (PUBLIC/PRIVATE): ");
                     String privacy = scanner.nextLine().toUpperCase();
 
                     playlistService.createPlaylist(
-                            name,
-                            description,
-                            privacy,
-                            loggedInUser.getEmail()
-                    );
+                            name, desc, privacy, loggedInUser.getEmail());
                 }
 
                 case 11 -> {
@@ -178,9 +151,7 @@ public class RevPlayApplication {
                         System.out.println("❌ Login required");
                         break;
                     }
-                    playlistService.viewUserPlaylists(
-                            loggedInUser.getEmail()
-                    );
+                    playlistService.viewUserPlaylists(loggedInUser.getEmail());
                 }
 
                 case 12 -> {
@@ -190,53 +161,33 @@ public class RevPlayApplication {
                     }
 
                     System.out.print("Playlist ID: ");
-                    int playlistId = scanner.nextInt();
-
+                    int pid = scanner.nextInt();
                     System.out.print("Song ID: ");
-                    int songId = scanner.nextInt();
+                    int sid = scanner.nextInt();
                     scanner.nextLine();
 
-                    playlistService.addSong(playlistId, songId);
+                    playlistService.addSong(pid, sid, loggedInUser.getEmail());
                 }
 
                 case 13 -> {
-                    if (loggedInUser == null) {
-                        System.out.println("❌ Login required");
-                        break;
-                    }
-
                     System.out.print("Playlist ID: ");
-                    int playlistId = scanner.nextInt();
-
+                    int pid = scanner.nextInt();
                     System.out.print("Song ID: ");
-                    int songId = scanner.nextInt();
+                    int sid = scanner.nextInt();
                     scanner.nextLine();
 
-                    playlistService.removeSong(playlistId, songId);
+                    playlistService.removeSong(pid, sid);
                 }
 
                 case 14 -> {
-                    if (loggedInUser == null) {
-                        System.out.println("❌ Login required");
-                        break;
-                    }
-
                     System.out.print("Playlist ID: ");
-                    int playlistId = scanner.nextInt();
+                    playlistService.deletePlaylist(scanner.nextInt());
                     scanner.nextLine();
-
-                    playlistService.deletePlaylist(playlistId);
                 }
 
                 case 15 -> {
                     loggedInUser = null;
-                    System.out.println("👋 Logged out successfully");
-                }
-
-                case 16 -> {
-                    logger.info("Application exited");
-                    System.out.println("🚀 Thank you for using RevPlay");
-                    System.exit(0);
+                    System.out.println("👋 User logged out");
                 }
 
                 // ================= ARTIST =================
@@ -247,54 +198,56 @@ public class RevPlayApplication {
                     System.out.print("Password: ");
                     String password = scanner.nextLine();
 
-                    boolean success =
-                            userService.registerArtist(email, password);
-
-                    System.out.println(success
-                            ? "✅ Artist registered successfully"
-                            : "❌ Artist registration failed");
+                    artistService.registerArtist(email, password);
                 }
 
                 case 18 -> {
-                    if (loggedInUser == null || !loggedInUser.isArtist()) {
-                        System.out.println("❌ Artist login required");
-                        break;
-                    }
+                    System.out.print("Artist Email: ");
+                    String email = scanner.nextLine();
+                    System.out.print("Password: ");
+                    String password = scanner.nextLine();
 
-                    System.out.print("Song Title: ");
-                    String title = scanner.nextLine();
-
-                    System.out.print("Artist Name: ");
-                    String artistName = scanner.nextLine();
-
-                    System.out.print("Genre: ");
-                    String genre = scanner.nextLine();
-
-                    System.out.print("Duration (seconds): ");
-                    int duration = scanner.nextInt();
-                    scanner.nextLine();
-
-                    musicService.uploadSong(
-                            title,
-                            artistName,
-                            genre,
-                            duration,
-                            loggedInUser.getEmail()
-                    );
+                    loggedInArtist = artistService.loginArtist(email, password);
                 }
 
                 case 19 -> {
-                    if (loggedInUser == null || !loggedInUser.isArtist()) {
+                    if (loggedInArtist == null) {
                         System.out.println("❌ Artist login required");
                         break;
                     }
 
-                    musicService.viewMySongStats(
-                            loggedInUser.getEmail()
+                    System.out.print("Title: ");
+                    String title = scanner.nextLine();
+                    System.out.print("Genre: ");
+                    String genre = scanner.nextLine();
+                    System.out.print("Duration (sec): ");
+                    int duration = scanner.nextInt();
+                    scanner.nextLine();
+
+                    artistService.uploadSong(
+                            title,
+                            loggedInArtist.getEmail(),
+                            genre,
+                            duration
                     );
                 }
 
-                default -> System.out.println("❌ Invalid option");
+                case 20 -> {
+                    if (loggedInArtist == null) {
+                        System.out.println("❌ Artist login required");
+                        break;
+                    }
+                    artistService.viewSongStats(loggedInArtist.getEmail());
+                }
+
+                // ================= EXIT =================
+
+                case 16 -> {
+                    System.out.println("🚀 Thank you for using RevPlay");
+                    System.exit(0);
+                }
+
+                default -> System.out.println("❌ Invalid choice");
             }
         }
     }

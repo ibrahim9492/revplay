@@ -8,8 +8,11 @@ public class Playlist {
     private String privacy;
     private String userEmail;
 
-    public Playlist(int playlistId, String name,
-                    String description, String privacy,
+    // 🔹 FULL CONSTRUCTOR (used for create)
+    public Playlist(int playlistId,
+                    String name,
+                    String description,
+                    String privacy,
                     String userEmail) {
         this.playlistId = playlistId;
         this.name = name;
@@ -18,6 +21,16 @@ public class Playlist {
         this.userEmail = userEmail;
     }
 
+    // 🔹 LIGHT CONSTRUCTOR (used for list/view)
+    public Playlist(int playlistId,
+                    String name,
+                    String privacy) {
+        this.playlistId = playlistId;
+        this.name = name;
+        this.privacy = privacy;
+    }
+
+    // 🔹 GETTERS
     public int getPlaylistId() {
         return playlistId;
     }

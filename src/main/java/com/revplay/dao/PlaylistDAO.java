@@ -5,9 +5,7 @@ import com.revplay.util.DBUtil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,14 +14,15 @@ public class PlaylistDAO {
     private static final Logger logger =
             LogManager.getLogger(PlaylistDAO.class);
 
-    // ===============================
+    // =========================
     // CREATE PLAYLIST
-    // ===============================
-    public void createPlaylist(String name,
-                               String description,
-                               String privacy,
-                               String userEmail) {
-
+    // =========================
+    public void createPlaylist(
+            String name,
+            String description,
+            String privacy,
+            String userEmail
+    ) {
         String sql = """
             INSERT INTO playlists (name, description, privacy, user_email)
             VALUES (?, ?, ?, ?)
@@ -36,26 +35,25 @@ public class PlaylistDAO {
             ps.setString(2, description);
             ps.setString(3, privacy);
             ps.setString(4, userEmail);
-
             ps.executeUpdate();
-            logger.info("Playlist created for user {}", userEmail);
 
         } catch (Exception e) {
             logger.error("Error creating playlist", e);
         }
     }
 
-    // ===============================
-    // VIEW USER PLAYLISTS
-    // ===============================
+    // =========================
+    // GET USER PLAYLISTS
+    // =========================
     public List<Playlist> getUserPlaylists(String userEmail) {
 
         List<Playlist> playlists = new ArrayList<>();
 
         String sql = """
-            SELECT playlist_id, name, description, privacy, user_email
+            SELECT playlist_id, name, privacy
             FROM playlists
             WHERE user_email = ?
+            ORDER BY playlist_id
         """;
 
         try (Connection con = DBUtil.getConnection();
@@ -65,68 +63,74 @@ public class PlaylistDAO {
             ResultSet rs = ps.executeQuery();
 
             while (rs.next()) {
-                playlists.add(new Playlist(
-                        rs.getInt("playlist_id"),
-                        rs.getString("name"),
-                        rs.getString("description"),
-                        rs.getString("privacy"),
-                        rs.getString("user_email")
-                ));
+                playlists.add(
+                        new Playlist(
+                                rs.getInt("playlist_id"),
+                                rs.getString("name"),
+                                rs.getString("privacy")
+                        )
+                );
             }
 
         } catch (Exception e) {
-            logger.error("Error fetching user playlists", e);
+            logger.error("Error fetching playlists", e);
         }
 
         return playlists;
     }
 
-    // ===============================
-    // VIEW PUBLIC PLAYLISTS (STEP 2)
-    // ===============================
-    public List<Playlist> getPublicPlaylists(String currentUserEmail) {
-
-        List<Playlist> playlists = new ArrayList<>();
-
-        String sql = """
-            SELECT playlist_id, name, description, privacy, user_email
-            FROM playlists
-            WHERE privacy = 'PUBLIC'
-              AND user_email <> ?
-        """;
-
+    // =========================
+    // VALIDATIONS
+    // =========================
+    public boolean playlistExists(int playlistId) {
+        String sql = "SELECT 1 FROM playlists WHERE playlist_id = ?";
         try (Connection con = DBUtil.getConnection();
              PreparedStatement ps = con.prepareStatement(sql)) {
 
-            ps.setString(1, currentUserEmail);
-            ResultSet rs = ps.executeQuery();
-
-            while (rs.next()) {
-                playlists.add(new Playlist(
-                        rs.getInt("playlist_id"),
-                        rs.getString("name"),
-                        rs.getString("description"),
-                        rs.getString("privacy"),
-                        rs.getString("user_email")
-                ));
-            }
+            ps.setInt(1, playlistId);
+            return ps.executeQuery().next();
 
         } catch (Exception e) {
-            logger.error("Error fetching public playlists", e);
+            return false;
         }
-
-        return playlists;
     }
 
-    // ===============================
-    // ADD SONG TO PLAYLIST
-    // ===============================
-    public void addSongToPlaylist(int playlistId, int songId) {
+    public boolean isOwnedByUser(int playlistId, String userEmail) {
+        String sql =
+                "SELECT 1 FROM playlists WHERE playlist_id = ? AND user_email = ?";
+        try (Connection con = DBUtil.getConnection();
+             PreparedStatement ps = con.prepareStatement(sql)) {
 
-        String sql = """
-            INSERT INTO playlist_songs (playlist_id, song_id)
-            VALUES (?, ?)
-        """;
+            ps.setInt(1, playlistId);
+            ps.setString(2, userEmail);
+            return ps.executeQuery().next();
+
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean songAlreadyInPlaylist(int playlistId, int songId) {
+        String sql =
+                "SELECT 1 FROM playlist_songs WHERE playlist_id = ? AND song_id = ?";
+        try (Connection con = DBUtil.getConnection();
+             PreparedStatement ps = con.prepareStatement(sql)) {
+
+            ps.setInt(1, playlistId);
+            ps.setInt(2, songId);
+            return ps.executeQuery().next();
+
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    // =========================
+    // ADD / REMOVE / DELETE
+    // =========================
+    public void addSongToPlaylist(int playlistId, int songId) {
+        String sql =
+                "INSERT INTO playlist_songs (playlist_id, song_id) VALUES (?, ?)";
 
         try (Connection con = DBUtil.getConnection();
              PreparedStatement ps = con.prepareStatement(sql)) {
@@ -134,23 +138,15 @@ public class PlaylistDAO {
             ps.setInt(1, playlistId);
             ps.setInt(2, songId);
             ps.executeUpdate();
-
-            logger.info("Song {} added to playlist {}", songId, playlistId);
 
         } catch (Exception e) {
             logger.error("Error adding song to playlist", e);
         }
     }
 
-    // ===============================
-    // REMOVE SONG FROM PLAYLIST
-    // ===============================
     public void removeSongFromPlaylist(int playlistId, int songId) {
-
-        String sql = """
-            DELETE FROM playlist_songs
-            WHERE playlist_id = ? AND song_id = ?
-        """;
+        String sql =
+                "DELETE FROM playlist_songs WHERE playlist_id = ? AND song_id = ?";
 
         try (Connection con = DBUtil.getConnection();
              PreparedStatement ps = con.prepareStatement(sql)) {
@@ -159,48 +155,12 @@ public class PlaylistDAO {
             ps.setInt(2, songId);
             ps.executeUpdate();
 
-            logger.info("Song {} removed from playlist {}", songId, playlistId);
-
         } catch (Exception e) {
             logger.error("Error removing song from playlist", e);
         }
     }
 
-    // ===============================
-    // UPDATE PLAYLIST
-    // ===============================
-    public void updatePlaylist(int playlistId,
-                               String name,
-                               String description,
-                               String privacy) {
-
-        String sql = """
-            UPDATE playlists
-            SET name = ?, description = ?, privacy = ?
-            WHERE playlist_id = ?
-        """;
-
-        try (Connection con = DBUtil.getConnection();
-             PreparedStatement ps = con.prepareStatement(sql)) {
-
-            ps.setString(1, name);
-            ps.setString(2, description);
-            ps.setString(3, privacy);
-            ps.setInt(4, playlistId);
-
-            ps.executeUpdate();
-            logger.info("Playlist {} updated", playlistId);
-
-        } catch (Exception e) {
-            logger.error("Error updating playlist", e);
-        }
-    }
-
-    // ===============================
-    // DELETE PLAYLIST
-    // ===============================
     public void deletePlaylist(int playlistId) {
-
         String sql = "DELETE FROM playlists WHERE playlist_id = ?";
 
         try (Connection con = DBUtil.getConnection();
@@ -208,8 +168,6 @@ public class PlaylistDAO {
 
             ps.setInt(1, playlistId);
             ps.executeUpdate();
-
-            logger.info("Playlist {} deleted", playlistId);
 
         } catch (Exception e) {
             logger.error("Error deleting playlist", e);

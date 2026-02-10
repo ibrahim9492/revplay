@@ -60,12 +60,6 @@ Simulated music player controls (text-based):
 
     Duration
 
-    Release date
-
-    Create albums and add songs
-
-    Update and delete songs/albums
-
     View uploaded songs and albums
 
     Track play count and statistics
